@@ -20,4 +20,4 @@ Ao reportar uma vulnerabilidade, pedimos que você mantenha a confidencialidade 
 ### Exclusão de Responsabilidade
 Não podemos garantir que nosso projeto esteja completamente livre de vulnerabilidades de segurança. No entanto, estamos comprometidos em trabalhar com a comunidade para manter nosso projeto seguro para todos os usuários.
 
-Não somos responsáveis por quaisquer perdas ou danos decorrentes de uma vulnerabilidade de segurança em nosso projeto. No entanto, faremos o possível para corrigir quaisquer vulnerabilidades relatadas o mais rápido possível.
+Não somos responsáveis por quaisquer perdas ou danos decorrentes de uma vulnerabilidade de segurança em nosso projeto. Porém, faremos o possível para corrigir quaisquer vulnerabilidades relatadas o mais rápido possível.
