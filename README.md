@@ -8,6 +8,6 @@ Este projeto é um website que tem como objetivo exibir informações e dados so
 | - | - | - | - | - | - | - |
 |[Millena Queiroz](https://github.com/MillenaQueiroz)|[Mayara](https://github.com/Mayara-tech.png) | [Joel Soares](https://github.com/JoelSRangel.png)|[Breno](https://github.com/brenob6.png)|[Henrique](https://github.com/henriqtorresl.png)|[Pedro Henrique](https://github.com/Muniz2811.png)|[Gabriel Evaristo](https://github.com/evinhassoft.png)|
 
-### 📝 Licença
+### 📝 Licença:
 
 Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE.md para obter mais informações.
