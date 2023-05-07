@@ -7,6 +7,7 @@ import { ComponentsModule } from '../components/components.module';
 //pages
 import { HomeComponent } from '../pages/home/home.component';
 import { DadosPecuariosComponent } from '../pages/dados-pecuarios/dados-pecuarios.component';
+import { ChartModule } from '../chart/chart.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DadosPecuariosComponent } from '../pages/dados-pecuarios/dados-pecuario
   ],
   imports: [
     CommonModule,
-		ComponentsModule
+		ComponentsModule,
+		ChartModule
   ]
 })
 export class HomeModule { }
