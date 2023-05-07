@@ -1,6 +1,6 @@
 # 🌾 Dados sobre o Agronegócio Brasileiro - DAB
 
-Este projeto é um website que tem como objetivo exibir informações e dados sobre o agronegócio brasileiro, incluindo informações sobre plantio e cultivo da produção agrícola.
+Este projeto é um website que tem como objetivo exibir informações e dados sobre o agronegócio brasileiro, incluindo informações sobre plantio e cultivo da produção agrícola e pecuária.
 
 ### :handshake:  Colaboradores:
 
