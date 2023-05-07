@@ -8,8 +8,6 @@ import { BovinoculturaComponent } from './components/bovinocultura/bovinocultura
 
 //pages
 import { HomeComponent } from './pages/home/home.component';
-import { SuinoculturaComponent } from './components/suinocultura/suinocultura.component';
-import { AvinoculturaComponent } from './components/avinocultura/avinocultura.component';
 
 
 
@@ -18,8 +16,7 @@ import { AvinoculturaComponent } from './components/avinocultura/avinocultura.co
     HeaderComponent,
     BovinoculturaComponent,
     HomeComponent,
-    SuinoculturaComponent,
-    AvinoculturaComponent
+
   ],
   imports: [
     CommonModule

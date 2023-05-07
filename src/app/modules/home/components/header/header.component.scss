@@ -1,13 +1,62 @@
 @import '../../../../../dist/scss/variables.scss';
 
-h1{
-    width: 100%;
-    padding: 70px 0;
-    
-    text-align: center;
-    font-size: 18px;
-    color: $primary-text-color;
-    
-    background-color: $primary-color;
+*{
+    font-family: 'Poppins', sans-serif;
+}
 
+a {
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 181px;
+    background-color: $primary-color;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-itens{
+    list-style: none;
+    display: flex;
+    padding-top: 70px;
+    right: 160px;
+    position: absolute;
+}
+
+.nav-itens>li>a{
+    font-size:  23px;
+    padding-left: 50px;
+    color: #000;
+    right: 40px;
+}
+
+.titulo{    
+    position: absolute;
+    top: 230px;
+    left: 700px;
+    font-size: 40px;
+    line-height: 1.5;
+    color: #000000;
+    text-align: center;
+}
+
+.subtitulo{
+    position: absolute;
+    top: 320px;
+    left: 838px;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #000000;
+    text-align: center;
+}
+
+.logo{
+    position: relative;
+    left: 50px;
+    top: 3px;
+    max-height: 10%;
+    max-width: 10%;
 }
