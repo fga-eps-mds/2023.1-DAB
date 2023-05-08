@@ -33,25 +33,7 @@ nav{
     right: 40px;
 }
 
-.titulo{    
-    position: absolute;
-    top: 230px;
-    left: 700px;
-    font-size: 40px;
-    line-height: 1.5;
-    color: #000000;
-    text-align: center;
-}
 
-.subtitulo{
-    position: absolute;
-    top: 320px;
-    left: 838px;
-    font-size: 25px;
-    line-height: 1.5;
-    color: #000000;
-    text-align: center;
-}
 
 .logo{
     position: relative;
@@ -59,4 +41,7 @@ nav{
     top: 3px;
     max-height: 10%;
     max-width: 10%;
+}
+.nav-itens{
+    color: aquamarine;
 }
