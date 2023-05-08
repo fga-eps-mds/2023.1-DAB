@@ -474,7 +474,6 @@ section {
   letter-spacing: 0.1vw;
 }
 
-/* =Contact - same layout as blog, but flipped image and text */
 .contact .chapter {
   color: var(--text-dark-color);
 }
