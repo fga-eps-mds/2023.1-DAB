@@ -342,7 +342,6 @@ header h1 span {
   position: absolute;
 }
 
-
 /* =Main */
 main {
   z-index: 1;
@@ -369,50 +368,6 @@ section {
   opacity: 0.4;
 }
 
-/* =Portfolio */
-.portfolio {
-  margin-top: var(--v-spacing);
-}
-.portfolio .chapter {
-  color: var(--text-dark-color);
-  top: 0;
-}
-.portfolio__categories {
-  display: flex;
-  flex-direction: column;
-}
-.portfolio__categories a {
-  font-family: var(--font-headings);
-  color: var(--text-dark-color);
-  text-decoration: none;
-  font-size: 5.4vw;
-  margin: auto;
-  letter-spacing: 0.2vw;
-  line-height: 1.5;
-}
-.portfolio__categories a:hover {
-  z-index: 1;
-}
-.portfolio__image--l,
-.portfolio__image--s  {
-  pointer-events: none; /* important to be able to hover over links under the image */
-  position: absolute;
-  width: 28vw;
-  top: 11vh;
-  left: 24vw;
-  overflow: hidden;
-  background-color: #000;
-  visibility: hidden;
-}
-.portfolio__image--l {
-  padding-bottom: 41.66vw;
-}
-.portfolio__image--s {
-  width: 15vw;
-  top: 25vh;
-  left: 54vw;
-  padding-bottom: 20vw;
-}
 .image_inside {
   position: absolute;
   opacity: 0.8;
