@@ -45,11 +45,11 @@ a {
         color: #335555;
     }
     .suino{
-        color: #335555;
+        color: #00B536;
     }
     .porquinho {
         transition: border-color  0.5s ease;
-        border: 3px solid #335555;
+        border: 3px solid #00B536;
     }
     background-color: $primary-color;
 }
@@ -105,11 +105,12 @@ a {
         color: #335555;
     }
     .bovino{
-        color: #335555;
+        transition: background-color  0.5s ease;
+        color: #00B536;
     }
     .vaquinha {
         transition: border-color  0.5s ease;
-        border: 3px solid #335555;
+        border: 3px solid #00B536;
     }
     background-color: $primary-color;
 }
@@ -164,11 +165,11 @@ a {
         color: #335555;
     }
     .avino{
-        color: #335555;
+        color: #00B536;
     }
     .galinha {
         transition: border-color  0.5s ease;
-        border: 3px solid #335555;
+        border: 3px solid #00B536;
     }
     background-color: $primary-color;
 }
