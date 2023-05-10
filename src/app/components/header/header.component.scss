@@ -4,8 +4,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-a {
+nav ul li a {
+    color: #000;
     text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #00B536;
 }
 
 header{
@@ -22,7 +27,7 @@ nav{
     list-style: none;
     display: flex;
     padding-top: 70px;
-    right: 160px;
+    right: 70px;
     position: absolute;
 }
 
@@ -39,6 +44,6 @@ nav{
     position: relative;
     left: 50px;
     top: 3px;
-    max-height: 10%;
-    max-width: 10%;
+    height: 180px; 
+    width: 180px;
 }
