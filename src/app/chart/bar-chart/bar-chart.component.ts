@@ -2,8 +2,6 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 import { IbgeApiService } from 'src/app/service/ibge-api.service';
 
-Chart.register(...registerables);
-
 @Component({
   selector: 'app-bar-chart',
   templateUrl: './bar-chart.component.html',
@@ -12,13 +10,19 @@ Chart.register(...registerables);
 export class BarChartComponent implements OnInit {
 	@ViewChild("barchart", { static: true}) element!: ElementRef;
 
-	title: string = "População Bovina";
-	labels: string[] = [];
-	data: number[] = [];
+	private title: string = "População Bovina";
+	private labels: string[] = [];
+	private data: number[] = [];
+  private chart!: Chart;
 
-	constructor(private ibgeApi: IbgeApiService) {
+	ngOnInit(): void {
+    Chart.register(...registerables);
+    this.loadChart();
 	}
 
+	constructor(private ibgeApi: IbgeApiService) {
+    this.getDados();
+	}
 	getDados(): void {
 		this.ibgeApi.getDados().subscribe((res) => {
 			res.forEach(data => {
@@ -28,13 +32,17 @@ export class BarChartComponent implements OnInit {
 						this.labels.push(serie.localidade.nome)
 					})
 				})
+        this.chart.data.datasets[0].data = this.data;
+        this.chart.data.labels = this.labels;
+        this.chart.update()
 			})
 		})
 	}
 
-	ngOnInit(): void {
-		this.getDados()
-		new Chart(this.element.nativeElement, {
+  loadChart(): void {
+    console.log(this.data);
+    console.log(this.labels);
+    this.chart = new Chart(this.element.nativeElement, {
 			type: 'bar',
 			data: {
 				labels: this.labels,
@@ -84,8 +92,9 @@ export class BarChartComponent implements OnInit {
 				},
 				responsive: true,
 				maintainAspectRatio: true
-				
+
 			}
 		})
-	}	
+
+  }
 }
