@@ -13,7 +13,7 @@ export class BarChartComponent implements OnInit {
 	private title: string = "População Bovina";
 	private labels: string[] = [];
 	private data: number[] = [];
-  private chart!: Chart;
+  	private chart!: Chart;
 
 	ngOnInit(): void {
     Chart.register(...registerables);

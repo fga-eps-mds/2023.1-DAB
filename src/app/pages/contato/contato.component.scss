@@ -1,0 +1,75 @@
+h1 {
+    margin: 2%;
+    top: 230px;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    color: #000000;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+form {
+    /* Centralizar o formulário na pagina */
+    margin: 0 auto;
+    width: 400px;
+    /* Ver o esboço do formulário */
+    padding: 1em;
+    border: 1px solid #dec129;
+    border-radius: 1em;
+    background-color: #CCC;
+}
+
+form div+div {
+    margin-top: 1em;
+}
+
+label {
+    /* Para garantir que todos os rótulos tenham o mesmo tamanho e estejam devidamente alinhados*/
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input,
+textarea {
+    /* Para garantir que todos os campos de texto tenham as mesmas configurações de fonte
+       Por padrão, as áreas de texto possuem a mesma fonte */
+    font: 1em sans-serif;
+
+    /* Para dar o mesmo tamanho a todos os campos de texto*/
+    width: 300px;
+    box-sizing: border-box;
+
+    /* Para harmonizar o aspecto e a sensação da borda do campo de texto */
+    border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+    /* Para dar um pouco de destaque aos elementos ativos*/
+    border-color: #000;
+}
+
+textarea {
+    /* Para alinhar corretamente campos de texto multilinha com seus rótulos */
+    vertical-align: top;
+
+    /* Para dar espaço suficiente para digitar algum texto */
+    height: 5em;
+}
+
+.button {
+    /* Para posicionar os botões na mesma posição dos campos de texto */
+    padding-left: 90px;
+    /* mesmo tamanho que os elementos do rótulo */
+}
+
+button {
+    /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço
+       entre os rótulos e seus campos de texto*/
+    margin-left: .5em;
+}

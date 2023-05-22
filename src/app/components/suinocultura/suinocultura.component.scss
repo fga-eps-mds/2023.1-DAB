@@ -16,7 +16,7 @@ a {
     display: flex;
 }
 
-.bovinocultura {
+.suinocultura {
     border-radius: 6px;
     width: 420px;
     height: 500px;
@@ -24,7 +24,7 @@ a {
     background-color: #fff;
 }
 
-.vaquinha {
+.porquinho {
     position: relative;
     top: 58px;
     left: 120px;
@@ -36,7 +36,7 @@ a {
     padding: 10px;
 }
 
-.bovino {
+.suino {
     position: relative;
     top: 90px;
     text-align: center;
@@ -46,7 +46,7 @@ a {
     line-height: 1.5;
 }
 
-.descriBovino {
+.descriSuino {
     position: relative;
     top: 130px;
     color: #101010;
@@ -57,16 +57,16 @@ a {
 }
 
 
-.bovinocultura:hover {
-    .descriBovino {
+.suinocultura:hover {
+    .descriSuino {
         color: #335555;
     }
 
-    .bovino {
+    .suino {
         color: #00B536;
     }
 
-    .vaquinha {
+    .porquinho {
         transition: border-color 0.5s ease;
         border: 3px solid #00B536;
     }
