@@ -3,6 +3,8 @@
 # Environments
 .env
 
+# Python
+__pycache__
 # Compiled output
 dist
 tmp
