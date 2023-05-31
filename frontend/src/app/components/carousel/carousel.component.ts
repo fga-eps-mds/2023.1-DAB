@@ -12,21 +12,21 @@ export class CarouselComponent {
       title: 'SAFRAS',
       description: 'Dados referentes a safras no último trimestre',
       hovered: false,
-      link: 'r1'
+      link: '#'
     },
     {
       image: '../../../assets/pecuaria.jpg',
       title: 'PECUÁRIA',
       description: 'Dados referentes a pecuária no último trimestre',
       hovered: false,
-      link: 'r1'
+      link: 'pecuaria'
     },
     {
       image: '../../../assets/agronegocio.jpeg',
       title: 'COMÉRCIO',
       description: 'Dados referentes a comércio no último trimestre',
       hovered: false,
-      link: '/r1'
+      link: '#'
     }
   ];
 }

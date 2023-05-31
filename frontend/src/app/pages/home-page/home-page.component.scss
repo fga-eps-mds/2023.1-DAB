@@ -4,7 +4,7 @@
 .banner {
     width: 100%;
     margin-bottom: 0;
-    position: relative;
+    position:relative;
     display: flex;
     flex-direction: column;
     
@@ -16,14 +16,18 @@
     }
     .banner-text{
       font-family: 'Poppins';
+      position: absolute;
+      top:20%;
+      left:5%;
+      z-index:0;
       font-style: normal;
       font-weight: 800;
-      font-size: 50px;
+      font-size: 60px;
       display: flex;
       align-items: center;
       letter-spacing: -0.005em;
       color: #363636;
-      backdrop-filter: blur(2px);
+     
     }
   }
 
