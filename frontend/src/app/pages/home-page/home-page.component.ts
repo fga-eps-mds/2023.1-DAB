@@ -13,11 +13,11 @@ export class HomePageComponent implements OnInit {
   }
 
   updateDataItems() {
-    const finalValues = [111, 233, 330, 220]; // Valores finais desejados
+    const finalValues = [190, 330, 45, 220]; // Valores finais desejados
 
     finalValues.forEach((value, index) => {
-      const startTime = 0; // Tempo inicial (em ms)
-      const duration = 1000; // Duração da animação (em ms)
+      const startTime = 0; 
+      const duration = 1000; // Duração da animação 
       const increment = value / duration; // Valor a ser incrementado a cada intervalo de tempo
 
       const interval = setInterval(() => {

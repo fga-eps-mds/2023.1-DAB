@@ -1,0 +1,11 @@
+<div class="carousel">
+    <div *ngFor="let item of carouselItems" class="carousel-item" (mouseover)="item.hovered = true" (mouseleave)="item.hovered = false">
+      <a href="r1">
+        <img [src]="item.image" alt="Item Image">
+      </a>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+      <div class="overlay" *ngIf="item.hovered"></div>
+    </div>
+  </div>
+  

@@ -14,7 +14,7 @@ import { HomePageComponent } from './home-page/home-page.component';
   declarations: [
     HomeComponent,
 		DadosPecuariosComponent,
-  HomePageComponent
+    HomePageComponent
   ],
   imports: [
     CommonModule,
