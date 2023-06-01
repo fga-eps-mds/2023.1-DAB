@@ -17,6 +17,7 @@ export interface Card {
 })
 export class CardComponent {
 
+  // os dados de cada card estão armazenados nesse array:
   cards: Card[] = [{
     id: '#',
     imagemUrl: './assets/porco.png',
