@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { BovinoculturaComponent } from './bovinocultura/bovinocultura.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -10,7 +11,8 @@ import { CarouselComponent } from './carousel/carousel.component';
   declarations: [
 		HeaderComponent,
 		BovinoculturaComponent,
-		CarouselComponent
+		CarouselComponent,
+  		FooterComponent
 	],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 	exports: [
 		HeaderComponent,
 		BovinoculturaComponent,
-		CarouselComponent
+		CarouselComponent,
+		FooterComponent
 	]
 })
 export class ComponentsModule { }
