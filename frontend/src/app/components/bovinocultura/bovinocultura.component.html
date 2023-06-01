@@ -1,27 +1,11 @@
 <h1> Monitoramento da Pecuária</h1>    
 
 <div class="container">
-    <div class="suinocultura">
-        <a href="#">
-            <img class = "porquinho" src = "./assets/porco.png">
-            <p class = "suino">Suinocultura</p>
-            <p class = "descriSuino">Dados referentes à<br> suinocultura do último<br> trimestre</p>
-        </a>
-    </div>
-
-    <div class="bovinocultura">
-        <a href="r1">
-            <img class = "vaquinha" src="./assets/vaquinha.png">
-            <p class="bovino"> Bovinocultura</p>
-            <p class="descriBovino"> Dados referentes à<br> bovinocultura do último<br> trimestre</p>
-        </a>
-    </div>    
-
-    <div  class="avinocultura">
-        <a href="#">
-            <img class = "galinha" src="./assets/galinha.png">
-            <p class="avino">Avinocultura</p>
-            <p class="descriAvino">Dados referentes à <br> avicultura do último <br> trimestre</p>
+    <div class="card" *ngFor="let card of cards">
+        <a [href]="card.id">
+            <img class="animal" [src]="card.imagemUrl">
+            <p class="nome">{{ card.nome }}</p>
+            <p class="descricao">{{ card.desc1 }}<br>{{ card.desc2 }}<br>{{ card.desc3 }}</p>
         </a>
     </div>
 </div>

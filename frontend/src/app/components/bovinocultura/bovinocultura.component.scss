@@ -1,6 +1,6 @@
 @import '../../../dist/scss/variables.scss';
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -10,7 +10,7 @@ a {
     text-decoration: none;
 }
 
-h1{    
+h1 {
     position: absolute;
     top: 230px;
     font-size: 40px;
@@ -21,7 +21,7 @@ h1{
     transform: translateX(-50%);
 }
 
-.container{
+.container {
     position: absolute;
     top: 380px;
     width: 100%;
@@ -29,169 +29,60 @@ h1{
     justify-content: space-around;
 }
 
-    .avinocultura{
-        border-radius: 6px;
-        width:420px;
-        height: 500px;
-        transition: background-color 0.5s ease;
-        background-color: #fff;  
+.card {
+    border-radius: 6px;
+    width: 420px;
+    height: 500px;
+    transition: background-color 0.5s ease;
+    background-color: #fff;
+}
+
+.animal {
+    position: relative;
+    top: 58px;
+    left: 120px;
+    max-width: 40%;
+    max-height: 40%;
+    border-radius: 50%;
+    border: 3px solid #000;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.nome {
+    position: relative;
+    top: 90px;
+    text-align: center;
+    color: #101010;
+    font-size: 30px;
+    font-weight: 1000;
+    line-height: 1.5;
+}
+
+.descricao {
+    position: relative;
+    top: 130px;
+    color: #101010;
+    font-size: 22px;
+    font-weight: 1000;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.card:hover {
+    .descricao {
+        color: #335555;
     }
 
-    .galinha {
-        position: relative;
-        top: 58px;
-        left: 120px;
-        max-width: 40%;
-        max-height: 40%;
-        border-radius: 50%;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        padding: 10px;
+    .nome {
+        color: #00B536;
     }
 
-    .avino {
-        position :relative;
-        top: 90px;
-        text-align: center;
-        color:#101010;
-        font-size: 30px;
-        font-weight: 1000;
-        line-height: 1.5;
-    }
-    
-    .descriAvino{
-        position : relative;
-        top: 130px;
-        color:#101010;
-        font-size: 22px;
-        font-weight: 1000;
-        line-height: 1.5;
-        text-align: center;
-    }
-    
-    .avinocultura:hover {
-        .descriAvino {
-            color: #335555;
-        }
-        .avino{
-            color: #00B536;
-        }
-        .galinha {
-            transition: border-color  0.5s ease;
-            border: 3px solid #00B536;
-        }
-        transition: background-color  0.5s ease;
-        background-color: $primary-color;
+    .animal {
+        transition: border-color 0.5s ease;
+        border: 3px solid #00B536;
     }
 
-    .bovinocultura{
-        border-radius: 6px;
-        width:420px;
-        height: 500px;
-        transition: background-color 0.5s ease;
-        background-color: #fff;  
-    }
-
-    .vaquinha {
-        position: relative;
-        top: 58px;
-        left: 120px;
-        max-width: 40%;
-        max-height: 40%;
-        border-radius: 50%;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        padding: 10px;
-    }
-
-    .bovino {
-        position :relative;
-        top: 90px;
-        text-align: center;
-        color:#101010;
-        font-size: 30px;
-        font-weight: 1000;
-        line-height: 1.5;
-    }
-    
-    .descriBovino{
-        position : relative;
-        top: 130px;
-        color:#101010;
-        font-size: 22px;
-        font-weight: 1000;
-        line-height: 1.5;
-        text-align: center;
-    }
-
-    
-    .bovinocultura:hover {
-        .descriBovino {
-            color: #335555;
-        }
-        .bovino{
-            color: #00B536;
-        }
-        .vaquinha {
-            transition: border-color  0.5s ease;
-            border: 3px solid #00B536;
-        }
-        transition: background-color  0.5s ease;
-        background-color: $primary-color;
-    }
-
-    .suinocultura{
-        border-radius: 6px;
-        width:420px;
-        height: 500px;
-        transition: background-color 0.5s ease;
-        background-color: #fff;  
-    }
-
-    .porquinho {
-        position: relative;
-        top: 58px;
-        left: 120px;
-        max-width: 40%;
-        max-height: 40%;
-        border-radius: 50%;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        padding: 10px;
-    }
-
-    .suino {
-        position :relative;
-        top: 90px;
-        text-align: center;
-        color:#101010;
-        font-size: 30px;
-        font-weight: 1000;
-        line-height: 1.5;
-    }
-    
-    .descriSuino{
-        position : relative;
-        top: 130px;
-        color:#101010;
-        font-size: 22px;
-        font-weight: 1000;
-        line-height: 1.5;
-        text-align: center;
-    }
-
-    
-    .suinocultura:hover {
-        .descriSuino {
-            color: #335555;
-        }
-        .suino{
-            color: #00B536;
-        }
-        .porquinho {
-            transition: border-color  0.5s ease;
-            border: 3px solid #00B536;
-        }
-        transition: background-color  0.5s ease;
-        background-color: $primary-color;
-    }
+    transition: background-color 0.5s ease;
+    background-color: $primary-color;
+}
