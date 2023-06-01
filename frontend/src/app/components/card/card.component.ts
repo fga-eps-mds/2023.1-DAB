@@ -11,11 +11,11 @@ export interface Card {
 }
 
 @Component({
-  selector: 'app-bovinocultura',
-  templateUrl: './bovinocultura.component.html',
-  styleUrls: ['./bovinocultura.component.scss']
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss']
 })
-export class BovinoculturaComponent {
+export class CardComponent {
 
   cards: Card[] = [{
     id: '#',
