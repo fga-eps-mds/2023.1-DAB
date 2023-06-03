@@ -1,19 +1,22 @@
-import urllib.request, json
-import ssl
-
+import urllib.request, json, ssl, time
+from urls import HOST, URLS
 from models import IbgeData
 
-ctx = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
-ctx.options |= 0x4
+def request ():
 
+    ctx = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
+    ctx = ssl._create_unverified_context()
+    ctx.options |= 0x4
 
-def request (path: str):
-    host = "https://servicodados.ibge.gov.br"
-    res = urllib.request.urlopen(host+path, context=ctx)
-    data = json.loads(res.read())
-    d = IbgeData(**data[0])
-    print(d.dict())
+    for i in URLS:
+        res = urllib.request.urlopen(HOST+URLS[i], context=ctx)
+        data = json.loads(res.read())
+        d = IbgeData(**data[0])
+        print(d.dict())
+        time.sleep(1)
 
 def main ():
-    path = "/api/v3/agregados/6832/periodos/201804%7C201901/variaveis/29?localidades=N1[all]&classificacao=12716[115236]"
-    request(path)
+    request()
+
+if __name__ == "__main__":
+    main()
