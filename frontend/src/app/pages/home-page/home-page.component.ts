@@ -13,7 +13,7 @@ export class HomePageComponent implements OnInit {
   }
 
   updateDataItems() {
-    const finalValues = [190, 293, 36, 47]; // Valores finais desejados
+    const finalValues = [142, 293, 36, 47]; // Valores finais desejados
 
     finalValues.forEach((value, index) => {
       
