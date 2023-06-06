@@ -1,0 +1,11 @@
+<h1> Monitoramento da Pecuária</h1>    
+
+<div class="container">
+    <div class="card" *ngFor="let card of cards">
+        <a [href]="card.id">
+            <img class="animal" [src]="card.imagemUrl">
+            <p class="nome">{{ card.nome }}</p>
+            <p class="descricao">{{ card.desc1 }}<br>{{ card.desc2 }}<br>{{ card.desc3 }}</p>
+        </a>
+    </div>
+</div>

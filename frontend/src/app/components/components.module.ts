@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
-import { BovinoculturaComponent } from './bovinocultura/bovinocultura.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 
 
@@ -10,8 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
 		HeaderComponent,
-		BovinoculturaComponent,
 		CarouselComponent,
+		CardComponent,
   		FooterComponent
 	],
   imports: [
@@ -19,8 +19,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
 	exports: [
 		HeaderComponent,
-		BovinoculturaComponent,
 		CarouselComponent,
+		CardComponent,
 		FooterComponent
 	]
 })
