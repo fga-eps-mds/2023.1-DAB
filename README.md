@@ -1,27 +1,13 @@
-# AppMds
+# 🌾 Dados sobre o Agronegócio Brasileiro - DAB
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+Este projeto é um website que tem como objetivo exibir informações e dados sobre o agronegócio brasileiro, incluindo informações sobre plantio e cultivo da produção agrícola e pecuária.
 
-## Development server
+### :handshake:  Colaboradores:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+|![Millena](https://github.com/MillenaQueiroz.png) |![Mayara](https://github.com/Mayara-tech.png)|![Breno](https://github.com/brenob6.png)|![Henrique](https://github.com/henriqtorresl.png)|![Pedro Henrique](https://github.com/Muniz2811.png)|![Gabriel Evaristo](https://github.com/evinhassoft.png)|
+| - | - | - | - | - | - |
+|[Millena Queiroz](https://github.com/MillenaQueiroz)|[Mayara](https://github.com/Mayara-tech)|[Breno](https://github.com/brenob6)|[Henrique](https://github.com/henriqtorresl)|[Pedro Henrique](https://github.com/Muniz2811)|[Gabriel Evaristo](https://github.com/evinhassoft)|
 
-## Code scaffolding
+### 📝 Licença:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE.md para obter mais informações.
