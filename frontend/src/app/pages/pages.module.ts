@@ -8,11 +8,13 @@ import { ComponentsModule } from '../components/components.module';
 import { HomeComponent } from '../pages/home/home.component';
 import { DadosPecuariosComponent } from '../pages/dados-pecuarios/dados-pecuarios.component';
 import { ChartModule } from '../chart/chart.module';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-		DadosPecuariosComponent
+		DadosPecuariosComponent,
+    HomePageComponent
   ],
   imports: [
     CommonModule,

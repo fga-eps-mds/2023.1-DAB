@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,800');
+
+.banner {
+    width: 100%;
+    margin-bottom: 0;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    
+    z-index: 0;
+    background-color: #335555;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .banner-text{
+      font-family: 'Poppins';
+      position: absolute;
+      top:20%;
+      left:5%;
+      z-index:0;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 60px;
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.005em;
+      color: #363636;
+     
+    }
+  }
+
+
+
+.green-bar {
+  height: 140px;
+  background-color: #335555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top:100%;
+}
+  
+  .data-item {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    color: #DACD51;
+    font-size: 55px;
+    font-weight: bold;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    animation: count-up 1s ease-in-out;
+  }
+
+  .data-text-item{
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+  }
+
+.carousel{
+  align-items: center;
+  text-align: center;
+
+  h2{
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 9%;
+    font-family: 'Inter';
+    font-style: bold;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 73px;
+    letter-spacing: -0.01em;
+  }
+}
+
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .info-content {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    .info-image {
+      img {
+        max-width: 620px;
+        height: auto;
+      }
+    }
+
+    .info-text {
+      margin-left: 18px;
+
+      p {
+        font-family: 'Inter';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 31px;
+        letter-spacing: 0.005em;
+        text-align: left;
+        margin-top: 40px;
+      }
+      h2{
+        font-family: 'Inter';
+        font-style: bold;
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 70px;
+        align-items: center;
+        letter-spacing: 0.001em;
+        line-height: 55px;
+      }
+    }
+  }
+}
