@@ -10,7 +10,7 @@ import { IbgeApiService } from 'src/app/service/ibge-api.service';
 export class BarChartComponent implements OnInit {
 	@ViewChild("barchart", { static: true}) element!: ElementRef;
 
-	private title: string = "População Bovina";
+	private title = "População Bovina";
 	private labels: string[] = [];
 	private data: number[] = [];
   private chart!: Chart;
