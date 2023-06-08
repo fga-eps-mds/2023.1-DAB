@@ -16,6 +16,32 @@ jobs:
       run: npm install
       working-directory: ./frontend
 
-    - name: ESLint check
-      run: npm run lint
-      working-directory: ./frontend
+      - name: ESLint check
+        run: npm run lint -- --json > eslint-results.json
+        working-directory: ./frontend
+
+      - name: Parse ESLint Results
+        id: eslint-results
+        uses: jansos/parse-eslint@v1
+        with:
+          eslint_output_file: eslint-results.json
+
+      - name: Post ESLint Comments
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const results = context.payload.workflow_run.steps.find(step => step.name === 'Parse ESLint Results').outputs.results.value;
+            const issue_number = context.issue.number;
+            const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
+            
+            results.forEach(result => {
+              const { filePath, messages } = result;
+              messages.forEach(message => {
+                octokit.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue_number,
+                  body: `ESLint Error in ${filePath}:\n\n${message.message} (line ${message.line}, column ${message.column})`
+                });
+              });
+            });
