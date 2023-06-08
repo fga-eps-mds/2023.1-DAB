@@ -3,7 +3,7 @@ name: Angular Practices Validation
 on:
   pull_request:
     branches:
-      - main
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
