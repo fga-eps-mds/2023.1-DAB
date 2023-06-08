@@ -15,7 +15,7 @@ export interface Card {
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent {
+export class CardComponent{
 
   // os dados de cada card estão armazenados nesse array:
   cards: Card[] = [{
@@ -43,9 +43,6 @@ export class CardComponent {
     desc3 : 'trimestre'
   }]
 
-  constructor() {}
-
-  ngOnInit(): void {
-  }
+  //constructor() {}
 
 }

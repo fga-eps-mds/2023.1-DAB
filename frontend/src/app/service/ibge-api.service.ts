@@ -8,7 +8,7 @@ import { IbgeData } from '../interfaces/IbgeData';
 })
 export class IbgeApiService {
 
-	private url: string = ' https://servicodados.ibge.gov.br/api/v3/agregados/960/periodos/-6/variaveis/2209?localidades=N3[all]&classificacao=12443[110056] '
+	private url = ' https://servicodados.ibge.gov.br/api/v3/agregados/960/periodos/-6/variaveis/2209?localidades=N3[all]&classificacao=12443[110056] '
   constructor(private http: HttpClient) { }
 
 	getDados(): Observable<IbgeData[]> {

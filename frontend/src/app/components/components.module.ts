@@ -6,17 +6,16 @@ import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 
 
-
 @NgModule({
-  declarations: [
+	declarations: [
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-  		FooterComponent
+		FooterComponent
 	],
-  imports: [
-    CommonModule
-  ],
+	imports: [
+		CommonModule
+	],
 	exports: [
 		HeaderComponent,
 		CarouselComponent,

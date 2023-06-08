@@ -1,5 +1,5 @@
 <div class="carousel">
-    <div *ngFor="let item of carouselItems" class="carousel-item" (mouseover)="item.hovered = true" (mouseleave)="item.hovered = false">
+    <div *ngFor="let item of carouselItems" class="carousel-item" (mouseover)="item.hovered = true" (mouseleave)="item.hovered = false" (focus)="item.hovered = true">
       <a [href]="item.link">
         <img [src]="item.image" alt="Item Image">
         <h3>{{ item.title }}</h3>
