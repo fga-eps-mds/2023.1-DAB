@@ -35,5 +35,5 @@ jobs:
           pip install pylint
       
       - name: Pylint check
-        run: pylink */*.py
+        run: pylint */*.py
         working-directory: ./backend
