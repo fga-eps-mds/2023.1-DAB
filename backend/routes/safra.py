@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from config.db import db, fetch_data
 from script.models import IbgeData
 
-safra = APIRouter()
+safra = APIRouter(prefix="/safra")
 collection = db.safra
 
 @safra.get("/plantada")
