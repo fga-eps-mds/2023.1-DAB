@@ -20,7 +20,7 @@ jobs:
       run: npm run lint
       working-directory: ./frontend
     
-  lint-backend:
+  pylint:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,7 +33,12 @@ jobs:
         run:
           python -m pip install --upgrade pip
           pip install pylint
+          pip install pip-tools
+          pip-sync requeriments/*.txt
       
       - name: Pylint check
-        run: pylint */*.py
+        run:
+          pylint app.py populate.py */*.py
+
+          
         working-directory: ./backend
