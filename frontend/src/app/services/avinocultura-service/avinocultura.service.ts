@@ -14,8 +14,14 @@ export class AvinoculturaService extends HttpBaseService{
     super(injector);
   }
 
+  // criar uma interface para esse retorno..
   listProducao(): Observable<any> {
     return this.httpGet(this.endpointProducao);
+  }
+
+  // criar uma interface para esse retorno..
+  listCabecas(): Observable<any> {
+    return this.httpGet(this.endpointCabecas);
   }
 
 }
