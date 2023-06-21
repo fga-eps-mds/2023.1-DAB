@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from config.db import db, fetch_data
 from script.models import IbgeData
 
-avicultura = APIRouter()
+avicultura = APIRouter(prefix="/avinocultura")
 collection = db.avicultura
 
 @avicultura.get("/producao")
