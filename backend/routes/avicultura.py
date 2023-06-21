@@ -2,10 +2,10 @@ from fastapi import APIRouter, HTTPException
 from config.db import db, fetch_data
 from script.models import IbgeData
 
-avicultura = APIRouter(prefix="/avinocultura")
+avinocultura = APIRouter(prefix="/avinocultura")
 collection = db.avicultura
 
-@avicultura.get("/producao")
+@avinocultura.get("/producao")
 async def quatidade_ovos_produzidos() -> IbgeData:
     search = {"id" : "1988"}
     response = await fetch_data(collection, search)
@@ -14,7 +14,7 @@ async def quatidade_ovos_produzidos() -> IbgeData:
     ibge_data : IbgeData = IbgeData(**response)
     return ibge_data
 
-@avicultura.get("/cabecas")
+@avinocultura.get("/cabecas")
 async def numero_cabecas() -> IbgeData:
     search = {"id" : "29"}
     response = collection.find_one(search)
