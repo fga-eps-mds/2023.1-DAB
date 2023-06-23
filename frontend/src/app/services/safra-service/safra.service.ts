@@ -7,10 +7,10 @@ import { HttpBaseService } from 'src/app/shared/http-base-service/http-base.serv
 })
 export class SafraService extends HttpBaseService {
 
-  private endpointPlantada: string = 'safra/plantada';    // área plantada
-  private endpointColhida: string = 'safra/colhida';    // área colhida
-  private endpointProducao: string = 'safra/producao';    // quantidade produzida
-  private endpointRendimento: string = 'safra/rendimento';    // rendimento médio
+  private endpointPlantada: string = 'safra/109';    // área plantada
+  private endpointColhida: string = 'safra/216';    // área colhida
+  private endpointProducao: string = 'safra/214';    // quantidade produzida
+  private endpointRendimento: string = 'safra/112';    // rendimento médio
 
   constructor(protected override readonly injector: Injector) { 
     super(injector);
