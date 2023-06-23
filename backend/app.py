@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routes.avicultura import avinocultura
+from routes.avinocultura import avinocultura
 from routes.suinocultura import suinocultura
 from routes.bovinocultura import bovinocultura
 from routes.safra import safra

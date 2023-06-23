@@ -13,7 +13,7 @@ class Code(str, Enum):
     producao_incubacao = "9589"
     populacao = "2209"
 
-@avicultura.get("/{code}", tags=["avicultura"])
+@avinocultura.get("/{code}", tags=["avicultura"])
 async def dados_avicultura(code : Code) -> IbgeData:
     """
     **Code**
