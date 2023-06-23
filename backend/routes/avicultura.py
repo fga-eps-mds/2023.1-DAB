@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException
 from config.db import db, fetch_data
 from script.models import IbgeData
 
-avicultura = APIRouter(prefix="/avinocultura")
+avinocultura = APIRouter(prefix="/avinocultura")
 collection = db.avicultura
 
 class Code(str, Enum):
@@ -24,9 +24,3 @@ async def dados_avicultura(code : Code) -> IbgeData:
     -   2209    : Número de cabeças
     """
     search = {"id" : code.value}
-    response = await fetch_data(collection, search)
-    if response is None:
-        raise HTTPException(status_code=404)
-    ibge_data : IbgeData = IbgeData(**response)
-    return ibge_data
-
