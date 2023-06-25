@@ -6,9 +6,7 @@ export interface IbgeData {
 			localidade: {
 				nome: string;
 			};
-			serie: {
-				2006: string;
-			}
+			serie: Object[]
 		}]
 	}]
 }
