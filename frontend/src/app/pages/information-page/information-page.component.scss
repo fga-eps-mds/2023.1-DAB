@@ -32,7 +32,7 @@
   background-color: rgba(16, 88, 5, 0.445);
   display: flex;
   justify-content: space-between;
-  margin-top: 10px; 
+  margin-top: 0px; 
   align-items: center;
   top:100%;
 }
@@ -40,8 +40,7 @@
   height: 450px;
   background-color: rgba(62, 59, 221, 0.445);
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px; 
+  margin-top: 100px; 
   align-items: center;
   top:100%;
 }
@@ -223,4 +222,18 @@
   .card:hover {
     transform: scale3d(1.1, 1.1, 1);
   }
-  
+  .titulo-principal {
+    font-size: 38px;
+    width: 550px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .data-text-principal {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Poppins';
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    color:black;
+  }
