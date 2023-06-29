@@ -237,3 +237,31 @@
     font-weight: 400;
     color:black;
   }
+
+  .texto {
+        font-family: 'arial';
+        font-size: 32px;
+        margin-top: 60px;
+        margin-left: 50px;
+        margin-right: 50px;
+        z-index:0;
+        font-weight: bold;
+        font-size: 60px;
+        display: flex;
+        text-align: center;
+        letter-spacing: -0.005em;
+        color:black;
+  }
+  .texto-base {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+    line-height: 2rem;
+    text-align: left;
+    font-family: 'Poppins';
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    color:black;
+  }
