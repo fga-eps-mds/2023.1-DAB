@@ -7,9 +7,9 @@ import { HttpBaseService } from 'src/app/shared/http-base-service/http-base.serv
 })
 export class BovinoculturaService extends HttpBaseService {
 
-  private endpointAbatidos: string = 'bovinocultura/284';
-  private endpointPeso: string = 'bovinocultura/285';
-  private endpointPopulacao: string = 'bovinocultura/2209';
+  private endpointAbatidos = 'bovinocultura/284';
+  private endpointPeso = 'bovinocultura/285';
+  private endpointPopulacao = 'bovinocultura/2209';
 
   constructor(protected override readonly injector: Injector) {
     super(injector);
