@@ -5,11 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { DadosPecuariosComponent } from './pages/dados-pecuarios/dados-pecuarios.component';
+import { InformationPageComponent } from './pages/information-page/information-page.component';
 
 const routes: Routes = [
   { path: "pecuaria", component:HomeComponent},
   { path: "r1", component:DadosPecuariosComponent},
-  {path: "", component:HomePageComponent}
+  { path: "", component:HomePageComponent},
+  { path: "info", component:InformationPageComponent}
 ];
 
 @NgModule({
