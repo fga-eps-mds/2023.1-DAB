@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { IbgeData } from '../interfaces/IbgeData';
 
+// esse service vai ser apagado, pois ele está fazendo a requisição direto da api do ibge
+
 @Injectable({
   providedIn: 'root'
 })

@@ -36,6 +36,9 @@ Acesse `localhost:8000/docs` para ver o documentação no Swagger.
 ### Frontend
 
 TODO
+<a href="https://codeclimate.com/github/fga-eps-mds/2023.1-DAB/maintainability"><img src="https://api.codeclimate.com/v1/badges/206eaafe919a26289f48/maintainability" /></a> <a href="https://codeclimate.com/github/fga-eps-mds/2023.1-DAB/test_coverage"><img src="https://api.codeclimate.com/v1/badges/206eaafe919a26289f48/test_coverage" /></a> 
+
+
 
 ### :handshake:  Colaboradores:
 

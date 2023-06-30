@@ -11,19 +11,15 @@ a {
 }
 
 h1 {
-    position: absolute;
-    top: 230px;
     font-size: 40px;
     line-height: 1.5;
     color: #000000;
     text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 100px;
+
 }
 
 .container {
-    position: absolute;
-    top: 380px;
     width: 100%;
     display: flex;
     justify-content: space-around;
