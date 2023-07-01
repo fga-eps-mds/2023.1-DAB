@@ -10,13 +10,16 @@ import { DadosPecuariosComponent } from '../pages/dados-pecuarios/dados-pecuario
 import { ChartModule } from '../chart/chart.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { DadosSafrasComponent } from './dados-safras/dados-safras.component';
+import { InformationPageComponent } from './information-page/information-page.component';
+
 
 @NgModule({
   declarations: [
     HomeComponent,
 		DadosPecuariosComponent,
     HomePageComponent,
-    DadosSafrasComponent
+    DadosSafrasComponent,
+    InformationPageComponent
   ],
   imports: [
     CommonModule,

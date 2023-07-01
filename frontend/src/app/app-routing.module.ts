@@ -6,12 +6,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { DadosPecuariosComponent } from './pages/dados-pecuarios/dados-pecuarios.component';
 import { DadosSafrasComponent } from './pages/dados-safras/dados-safras.component';
+import { InformationPageComponent } from './pages/information-page/information-page.component';
 
 const routes: Routes = [
   { path: "pecuaria", component:HomeComponent},
   { path: "r1", component:DadosPecuariosComponent},
-  {path: "safra", component:DadosSafrasComponent},
-  {path: "", component:HomePageComponent}
+  { path: "safra", component:DadosSafrasComponent},
+  { path: "", component:HomePageComponent},
+  { path: "info", component:InformationPageComponent}
 ];
 
 @NgModule({

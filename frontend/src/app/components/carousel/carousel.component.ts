@@ -26,7 +26,7 @@ export class CarouselComponent {
       title: 'COMÉRCIO',
       description: 'Dados referentes a comércio no último trimestre',
       hovered: false,
-      link: '#'
+      link: 'info'
     }
   ];
 }
