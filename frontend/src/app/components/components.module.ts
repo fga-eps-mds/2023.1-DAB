@@ -4,6 +4,8 @@ import { HeaderComponent } from './header/header.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
+import { MapComponent } from './map/map.component';
+
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-		FooterComponent
+		FooterComponent,
+        MapComponent,
+  
 	],
 	imports: [
 		CommonModule
@@ -20,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-		FooterComponent
+		FooterComponent,
+		MapComponent
 	]
 })
 export class ComponentsModule { }

@@ -1,0 +1,29 @@
+@import '../../../dist/scss/variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.MAPA{
+    position: absolute;
+    top:200px;
+    left: 600px;
+}
+
+#svg-Mapa { fill:#00B536}
+#svg-Mapa text { fill:#0000; font:12px 'Poppins', sans-serif; cursor:pointer }
+#svg-Mapa a{ text-decoration:none }
+#svg-Mapa a:hover { cursor:pointer; text-decoration:none }
+#svg-Mapa a:hover path{ fill:#238E23 !important }
+
+
+
+
+
+

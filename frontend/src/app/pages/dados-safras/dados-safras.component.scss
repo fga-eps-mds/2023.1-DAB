@@ -12,7 +12,7 @@ a {
 
 h1 {
     position: absolute;
-    top: 250px;
+    top: 150px;
     font-size: 40px;
     line-height: 1.5;
     color: #000000;
@@ -21,50 +21,15 @@ h1 {
     transform: translateX(-50%);
 }
 
-
-.Dropdown{
+h2{
     position: absolute;
-    top: 400px;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    padding: 5px 10px;
-    height: 25vw;
+    top: 250px;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #000000;
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    
-    h2{
-        position: absolute;
-        top: -40px;
-    }
-
-    select {
-        width: 507px;
-        height: 40px;
-        outline: none;
-    }
-  
-    option {
-        background: #000;
-        font-size: 20px;
-    }
 }
 
-.Confirma{
-    position: absolute;
-    top: 500px;
-    width: 214px;
-	height: 60px;
-	background-color: #00B536;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 20px 20px 20px 20px;
-}
 
-.texto{
-    color: #ffffff;
-    font-size: 20px;
-}
