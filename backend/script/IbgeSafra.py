@@ -1,4 +1,4 @@
-from .urls import IbgeRequest
+from .IbgeRequest import IbgeRequest
 from .models import IbgeData
 from .util import toChartData
 from config.db import insert_data
