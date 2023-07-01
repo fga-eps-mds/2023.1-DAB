@@ -1,9 +1,28 @@
-HOST="https://servicodados.ibge.gov.br/api/v3/agregados/"
+import ssl
+import json
+import urllib.request
+from script.models import IbgeData
 
-URLS = {
-    "avicultura":"915/periodos/-20/variaveis/1988|29|9588|9589?localidades=N1[all]&classificacao=12716[115236]",
-    "suinocultura":"1093/periodos/-20/variaveis/284|285?localidades=N1[all]&classificacao=12716[115236]",
-    "bovinocultura":"1092/periodos/-20/variaveis/284%7C285?localidades=N1[all]&classificacao=12716[115236]|18[992,55,56,111734,111735]",
-    "safra":"1612/periodos/-20/variaveis/109|216|214|112?localidades=N3[all]&classificacao=81[2692,2702,2711,2713]"
+class IbgeRequest:
+    def __init__(self) -> None:
+        pass
 
-}
+    HOST="https://servicodados.ibge.gov.br/api/v3/agregados/"
+
+    def request(self, query: str) -> list[IbgeData]:
+        url = self.HOST+query
+
+        ctx = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
+        ctx = ssl._create_unverified_context()
+        ctx.options |= 0x4
+
+        req = urllib.request.urlopen(url, context=ctx)
+        res = req.read()
+        json_data = json.loads(res)
+        data_list: IbgeData = []
+        for data in json_data:
+            ibgeData = IbgeData(**data)
+            data_list.append(ibgeData)
+
+        return data_list
+
