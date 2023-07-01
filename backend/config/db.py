@@ -15,6 +15,10 @@ uri = f"mongodb+srv://{DB_USER}:{DB_PASS}@cluster0.b5iy3zl.mongodb.net/?retryWri
 client = MongoClient(uri, server_api=ServerApi('1'))
 db = client.DAB
 
+def insert_data(collection: str, data):
+    db[collection].insert_many(data)
+
 async def fetch_data(collection : Collection, search : dict):
     response = collection.find_one(search)
     return response
+
