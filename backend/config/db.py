@@ -1,5 +1,4 @@
 import os
-
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from pymongo.collection import Collection
@@ -25,4 +24,3 @@ async def fetch_one(collection: str, search: dict):
 async def fetch_list(collection : str, search : dict):
     response = db[collection].find(search)
     return response
-

@@ -25,4 +25,3 @@ class IbgeRequest:
             data_list.append(ibgeData)
 
         return data_list
-

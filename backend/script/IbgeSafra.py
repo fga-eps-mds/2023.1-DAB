@@ -26,4 +26,3 @@ class IbgeSafra:
             request = ibgeRequest.request(query)
             chart = toChartData(request, code)
             insert_data("SAFRA", chart)
-             

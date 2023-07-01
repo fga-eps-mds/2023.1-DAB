@@ -1,13 +1,33 @@
 from fastapi import FastAPI
-from routes.avinocultura import avinocultura
+from fastapi.middleware.cors import CORSMiddleware
+
+from routes.avinocultura import avicultura
 from routes.suinocultura import suinocultura
 from routes.bovinocultura import bovinocultura
 from routes.safra import safra
-from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-app.include_router(avinocultura)
+description = """
+DAB API dados sobre o agronegócio brasileiro.
+"""
+
+tags_description = [
+    {
+        "name": "avicultura",
+        "description": "Consulte dados sobre a população ..."
+    },
+    {
+        "name": "suinocultura",
+    },
+    {
+        "name": "bovinocultura"
+    }
+]
+
+app = FastAPI(title="DAB", description=description, openapi_tags=tags_description)
+
+app.include_router(avicultura)
 app.include_router(suinocultura)
 app.include_router(bovinocultura)
 app.include_router(safra)

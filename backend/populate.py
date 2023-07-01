@@ -6,4 +6,3 @@ if __name__ == "__main__":
     ibgePecuaria = IbgePecuaria()
    # ibgeSafra.insert()
     ibgePecuaria.insert()
-
