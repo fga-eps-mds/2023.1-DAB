@@ -1,10 +1,10 @@
 from enum import Enum
 from fastapi import APIRouter, HTTPException
-from config.db import db, fetch_data
-from script.models import IbgeData
+from config.db import fetch_list
+from script.models import ChartData
 
 safra = APIRouter(prefix="/safra")
-collection = db.safra
+collection = "SAFRA"
 
 class Code(str, Enum):
     area_plantada = "109"
@@ -12,8 +12,8 @@ class Code(str, Enum):
     producao = "214"
     rendimento = "112"
 
-@safra.get("/{code}")
-async def dados_safra(code : Code) -> IbgeData:
+@safra.get("/{code}/{locale}")
+async def dados_safra(code : Code, locale: str):
     """
     **Code:**
     -   109 : Area plantada
@@ -21,47 +21,14 @@ async def dados_safra(code : Code) -> IbgeData:
     -   214 : Produção
     -   112 : Rendimento
     """
-    search = {"id" : code.value}
-    response = await fetch_data(collection, search)
+    search = {"id": code.value, "locale" : locale}
+    response = await fetch_list(collection, search)
     if response is None:
         raise HTTPException(status_code=404)
-    ibge_data : IbgeData = IbgeData(**response)
-    return ibge_data
+    chart_list = []
+    for chart in response:
+       chartData = ChartData(**chart) 
+       chart_list.append(chartData)
 
-#@safra.get("/plantada")
-#async def area_plantada() -> IbgeData:
-#    search = {"id" : "109"}
-#    response = await fetch_data(collection, search)
-#    if response is None:
-#        raise HTTPException(status_code=404)
-#    ibge_data : IbgeData = IbgeData(**response)
-#    return ibge_data
-#
-#@safra.get("/colhida")
-#async def area_colhida() -> IbgeData:
-#    search = {"id" : "216"}
-#    response = collection.find_one(search)
-#    if response is None:
-#        raise HTTPException(status_code=404)
-#    ibge_data : IbgeData = IbgeData(**response)
-#    return ibge_data
-#
-#
-#@safra.get("/producao")
-#async def quantidade_produzida() -> IbgeData:
-#    search = {"id" : "214"}
-#    response = collection.find_one(search)
-#    if response is None:
-#        raise HTTPException(status_code=404)
-#    ibge_data : IbgeData = IbgeData(**response)
-#    return ibge_data
-#
-#
-#@safra.get("/rendimento")
-#async def rendimento_medio() -> IbgeData:
-#    search = {"id" : "112"}
-#    response = collection.find_one(search)
-#    if response is None:
-#        raise HTTPException(status_code=404)
-#    ibge_data : IbgeData = IbgeData(**response)
-#    return ibge_data
+    return chart_list
+
