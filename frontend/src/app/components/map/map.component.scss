@@ -11,10 +11,11 @@ a {
 }
 
 .MAPA{
-    position: relative;
-    top:200px;
-    left: 600px;
+    position: absolute;
+    top: 180px;
+    left: 550px;
 }
+
 
 #svg-Mapa { fill:#00B536}
 #svg-Mapa text { fill:#0000; font:12px 'Poppins', sans-serif; cursor:pointer }
