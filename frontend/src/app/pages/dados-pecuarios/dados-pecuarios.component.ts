@@ -10,15 +10,20 @@ import { ChartData } from 'src/app/interfaces/ChartData';
   styleUrls: ['./dados-pecuarios.component.scss']
 })
 export class DadosPecuariosComponent implements OnInit{
-	charts
 
-	constructor(private route: ActivatedRoute, private service: DabServiceService){
-		
-		this.charts = this.loadData()
-		console.log(this.charts)
-	}
+	charts: Array<ChartData> = [];
+	load: boolean = false;
+
+	// Injeção de dependências
+	constructor(
+		private route: ActivatedRoute, 
+		private service: DabServiceService)
+	{ }
 
 	ngOnInit() {
+		this.charts = this.loadData();
+		console.log(this.charts);
+		//this.load = true;		// após as requisições serem feitas, o load recebe true
 	}
 
 	loadData(): Array<ChartData> {
@@ -46,10 +51,10 @@ export class DadosPecuariosComponent implements OnInit{
 							chart.data.push(n);
 					})
 				})
-				charts.push(chart)
+				charts.push(chart);
 			})
 		})
-		return charts
+		return charts;
 	}
 
 }

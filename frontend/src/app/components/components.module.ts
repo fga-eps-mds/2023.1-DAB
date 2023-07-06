@@ -5,6 +5,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterLink } from '@angular/router';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { RouterLink } from '@angular/router';
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-		FooterComponent
+		FooterComponent,
+  		LoaderComponent
 	],
 	imports: [
 		CommonModule,
@@ -22,7 +24,8 @@ import { RouterLink } from '@angular/router';
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-		FooterComponent
+		FooterComponent,
+		LoaderComponent
 	]
 })
 export class ComponentsModule { }
