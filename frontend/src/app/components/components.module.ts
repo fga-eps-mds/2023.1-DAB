@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CardComponent } from './card/card.component';
-import { FooterComponent } from './footer/footer.component';
 import { RouterLink } from '@angular/router';
 import { LoaderComponent } from './loader/loader.component';
 
@@ -13,7 +12,6 @@ import { LoaderComponent } from './loader/loader.component';
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-		FooterComponent,
   		LoaderComponent
 	],
 	imports: [
@@ -24,7 +22,6 @@ import { LoaderComponent } from './loader/loader.component';
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-		FooterComponent,
 		LoaderComponent
 	]
 })
