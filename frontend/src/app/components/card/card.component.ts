@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 export interface Card {
   id: string;
@@ -15,11 +16,20 @@ export interface Card {
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
+
 export class CardComponent{
+
+  constructor(private router: ActivatedRoute) {}
+
+	ngOnInit() {
+		
+	}
+
+	dados: String = "";
 
   // os dados de cada card estão armazenados nesse array:
   cards: Card[] = [{
-    id: '#',
+    id: 'suinocultura',
     imagemUrl: './assets/porco.png',
     nome: 'Suinocultura',
     desc1: 'Dados referentes à',
@@ -27,7 +37,7 @@ export class CardComponent{
     desc3 : 'trimestre'
   }, 
   {
-    id: 'r1',
+    id: 'bovinocultura',
     imagemUrl: './assets/vaquinha.png',
     nome: 'Bovinocultura',
     desc1: 'Dados referentes à',
@@ -35,14 +45,11 @@ export class CardComponent{
     desc3 : 'trimestre'
   }, 
   {
-    id: '#',
+    id: 'avinocultura',
     imagemUrl: './assets/galinha.png',
     nome: 'Avinocultura',
     desc1: 'Dados referentes à',
     desc2: 'avicultura do último',
     desc3 : 'trimestre'
   }]
-
-  //constructor() {}
-
 }

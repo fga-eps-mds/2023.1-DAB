@@ -1,3 +1,5 @@
 <app-header></app-header>
-<app-bar-chart></app-bar-chart>
+<div *ngFor="let chart of charts">
+	<app-bar-chart [chart]="chart"></app-bar-chart>
+</div>
 <app-footer></app-footer>
