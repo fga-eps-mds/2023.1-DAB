@@ -7,11 +7,11 @@ import { HttpBaseService } from 'src/app/shared/http-base-service/http-base.serv
 })
 export class AvinoculturaService extends HttpBaseService {
 
-  private endpointCabecasGalinhasPoeiras: string = 'avinocultura/1988';
-  private endpointOvosProduzidos: string = 'avinocultura/29';
-  private endpointOvosProduzidosConsumo: string = 'avinocultura/9588';
-  private endpointOvosProduzidosIncubacao: string = 'avinocultura/9589';
-  private endpointCabecas: string = 'avinocultura/2209';
+  private endpointCabecasGalinhasPoeiras = 'avinocultura/1988';
+  private endpointOvosProduzidos = 'avinocultura/29';
+  private endpointOvosProduzidosConsumo = 'avinocultura/9588';
+  private endpointOvosProduzidosIncubacao = 'avinocultura/9589';
+  private endpointCabecas = 'avinocultura/2209';
 
   constructor(protected override readonly injector: Injector) {
     super(injector);
