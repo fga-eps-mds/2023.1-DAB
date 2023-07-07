@@ -1,6 +1,9 @@
 export interface ChartData {
-	type: string
-	title: string
-	labels: Array<string>
-	data: Array<number>
+	id: string;
+	locale: string;
+	categoria: string;
+	type: string;
+	title: string;
+	labels: string[];
+	dataList: string[];
 }

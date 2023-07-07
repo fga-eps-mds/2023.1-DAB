@@ -4,15 +4,15 @@ import { Chart, registerables } from 'chart.js';
 import { ChartData } from 'src/app/interfaces/ChartData';
 
 @Component({
-  selector: 'app-bar-chart',
-  templateUrl: './bar-chart.component.html',
-  styleUrls: ['./bar-chart.component.scss']
+	selector: 'app-bar-chart',
+	templateUrl: './bar-chart.component.html',
+	styleUrls: ['./bar-chart.component.scss']
 })
 
 export class BarChartComponent implements OnInit {
-	@ViewChild("barchart", { static: true}) element!: ElementRef;
+	@ViewChild("barchart", { static: true }) element!: ElementRef;
 
-  @Input() chart!: ChartData;
+	@Input() chart!: ChartData;
 
 
 	ngOnInit(): void {
@@ -21,31 +21,17 @@ export class BarChartComponent implements OnInit {
 		this.createChart(this.chart)
 	}
 
-	//getDados(): void {
-	//	this.ibgeApi.getDados().subscribe((res) => {
-	//		res.forEach(data => {
-	//			data.resultados.forEach(resultado => {
-	//				resultado.series.forEach(serie => {
-	//					this.data.push(parseInt(serie.serie[2006]))
-	//					this.labels.push(serie.localidade.nome)
-	//				})
-	//			})
-  //      this.chart.data.datasets[0].data = this.data;
-  //      this.chart.data.labels = this.labels;
-  //      this.chart.update()
-	//		})
-	//	})
-	//}
 
-  createChart(chartData: ChartData): void {
-    new Chart(this.element.nativeElement, {
-			type: 'bar',
+	createChart(chartData: ChartData): void {
+
+		new Chart(this.element.nativeElement, {
+			type: "bar",
 			data: {
 				labels: chartData.labels,
 
 				datasets: [
 					{
-						data: chartData.data,
+						data: chartData.dataList,
 						backgroundColor: [
 							"#f30",
 							"#235",
@@ -53,6 +39,7 @@ export class BarChartComponent implements OnInit {
 						]
 					}
 				]
+
 			},
 			options: {
 				scales: {
@@ -73,25 +60,25 @@ export class BarChartComponent implements OnInit {
 						}
 					}
 				},
-				plugins: {
-					title: {
-						display: true,
-						fullSize: true,
-						color: "black",
-						font: {
-							size: 60
-						},
-						text: chartData.title
+			plugins: {
+				title: {
+					display: true,
+					fullSize: true,
+					color: "black",
+					font: {
+						size: 60
 					},
-					legend: {
-						display: false
-					}
+					text: chartData.title
 				},
-				responsive: true,
-				maintainAspectRatio: true
+				legend: {
+					display: false
+				}
+			},
+			responsive: true,
+			maintainAspectRatio: true
 
-			}
+		}
 		})
 
-  }
+	}
 }

@@ -1,5 +1,13 @@
 <app-header></app-header>
-<div *ngFor="let chart of charts">
-	<app-bar-chart [chart]="chart"></app-bar-chart>
+
+<ng-template #loading>
+	<app-loader></app-loader>
+</ng-template>
+
+<div *ngIf="load else loading">
+	<app-bar-chart 
+		*ngFor="let chart of charts" 
+		[chart]="chart"
+		>
+	</app-bar-chart>
 </div>
-<app-footer></app-footer>

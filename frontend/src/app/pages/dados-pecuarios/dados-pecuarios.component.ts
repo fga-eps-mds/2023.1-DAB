@@ -1,8 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DabServiceService } from 'src/app/services/dab-service/dab-service.service';
 import { ChartData } from 'src/app/interfaces/ChartData';
+import { AvinoculturaService } from 'src/app/services/avinocultura-service/avinocultura.service';
+import { BovinoCulturaService } from 'src/app/services/bovinocultura-service/bovinocultura.service';
+import { SuinoculturaService } from 'src/app/services/suinocultura-service/suinocultura.service';
 
+enum DataId {
+	SUINO  = "suinocultura",
+	BOVINO = "bovinocultura",
+	AVINO = "avinocultura",
+	SAFRA = "safra"
+}
 
 @Component({
   selector: 'app-dados-pecuarios',
@@ -10,15 +18,23 @@ import { ChartData } from 'src/app/interfaces/ChartData';
   styleUrls: ['./dados-pecuarios.component.scss']
 })
 export class DadosPecuariosComponent implements OnInit{
-	charts
 
-	constructor(private route: ActivatedRoute, private service: DabServiceService){
-		
-		this.charts = this.loadData()
-		console.log(this.charts)
-	}
+	charts: Array<ChartData> = [];
+	load: boolean = false;
+
+	// Injeção de dependências
+	constructor (
+		private route: ActivatedRoute, 
+		private bovinoculturaService: BovinoCulturaService,
+		private suinoculturaService: SuinoculturaService,
+		private aviculturaService: AvinoculturaService,
+	)
+	{ }
 
 	ngOnInit() {
+		this.charts = this.loadData();
+		
+		console.log(this.charts);
 	}
 
 	loadData(): Array<ChartData> {
@@ -26,30 +42,73 @@ export class DadosPecuariosComponent implements OnInit{
 		const dataId = routerParams.get("dadosId") ?? "";
 
 		let charts: Array<ChartData> = [];
-		let data = this.service.request(dataId);
-		data.forEach(obs => {
-			obs.subscribe(obj => {
-				console.log(obj)
-			let chart: ChartData = {
-				type: "",
-				title: "",
-				data: [],
-				labels: []
-			};
-				chart.title = obj.variavel;
-				obj.resultados[0].series.forEach(serie => {
-					let array = Object.entries(serie.serie)
-					array.forEach((value) => {
-						chart.labels.push(value[0])
-						let n = Number(value[1]) ?? null;
-						if(n)
-							chart.data.push(n);
-					})
+		
+		switch(dataId) {
+			case DataId.BOVINO:
+
+				this.bovinoculturaService.listAbatidos().subscribe((abatidos) => {
+					charts.push(abatidos);		// adiciona a requisição ao array que será retornado nessa função...
+				});
+
+				this.bovinoculturaService.listCabecas().subscribe((cabecas) => {
+					charts.push(cabecas);
 				})
-				charts.push(chart)
-			})
-		})
-		return charts
+
+				this.bovinoculturaService.listPeso().subscribe((peso) => {
+					charts.push(peso);
+
+					this.load = true;				// após as requisições serem feitas, o load recebe true
+				});
+
+			break;
+
+			case DataId.SUINO:
+
+				this.suinoculturaService.listAbatidos().subscribe((abatidos) => {
+					charts.push(abatidos);
+				});
+
+				this.suinoculturaService.listCabecas().subscribe((cabecas) => {
+					charts.push(cabecas);
+				})
+
+				this.suinoculturaService.listPeso().subscribe((peso) => {
+					charts.push(peso);
+
+					this.load = true;				// após as requisições serem feitas, o load recebe true
+				});
+
+			break;
+
+			case DataId.AVINO:
+
+				this.aviculturaService.listCabecas().subscribe((cabecas) => {
+					charts.push(cabecas);
+				});
+
+				this.aviculturaService.listGalinhasPoeiras().subscribe((galinhas) => {
+					charts.push(galinhas);
+				});
+
+				this.aviculturaService.listOvosProduzidos().subscribe((ovosProduzidos) => {
+					charts.push(ovosProduzidos);
+				});
+
+				this.aviculturaService.listOvosProduzidosConsumo().subscribe((ovosProduzidosConsumo) => {
+					charts.push(ovosProduzidosConsumo);
+				});
+
+				this.aviculturaService.listOvosProduzidosIncubacao().subscribe((ovosProduzidosIncubacao) => {
+					charts.push(ovosProduzidosIncubacao);
+
+					this.load = true;				// após as requisições serem feitas, o load recebe true
+				});
+
+			break;
+		}
+
+		return charts;
+
 	}
 
 }
