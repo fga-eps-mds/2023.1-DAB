@@ -1,54 +1,37 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
-import { IbgeApiService } from 'src/app/service/ibge-api.service';
+
+import { ChartData } from 'src/app/interfaces/ChartData';
 
 @Component({
-  selector: 'app-bar-chart',
-  templateUrl: './bar-chart.component.html',
-  styleUrls: ['./bar-chart.component.scss']
+	selector: 'app-bar-chart',
+	templateUrl: './bar-chart.component.html',
+	styleUrls: ['./bar-chart.component.scss']
 })
-export class BarChartComponent implements OnInit {
-	@ViewChild("barchart", { static: true}) element!: ElementRef;
 
-	private title = "População Bovina";
-	private labels: string[] = [];
-	private data: number[] = [];
-  private chart!: Chart;
+export class BarChartComponent implements OnInit {
+	@ViewChild("barchart", { static: true }) element!: ElementRef;
+
+	@Input() chart!: ChartData;
+
 
 	ngOnInit(): void {
-    Chart.register(...registerables);
-    this.loadChart();
+		Chart.register(...registerables);
+		//console.log(this.chart)
+		this.createChart(this.chart)
 	}
 
-	constructor(private ibgeApi: IbgeApiService) {
-    this.getDados();
-	}
-	getDados(): void {
-		this.ibgeApi.getDados().subscribe((res) => {
-			res.forEach(data => {
-				data.resultados.forEach(resultado => {
-					resultado.series.forEach(serie => {
-						this.data.push(parseInt(serie.serie[2006]))
-						this.labels.push(serie.localidade.nome)
-					})
-				})
-        this.chart.data.datasets[0].data = this.data;
-        this.chart.data.labels = this.labels;
-        this.chart.update()
-			})
-		})
-	}
 
-  loadChart(): void {
-    console.log(this.data);
-    console.log(this.labels);
-    this.chart = new Chart(this.element.nativeElement, {
-			type: 'bar',
+	createChart(chartData: ChartData): void {
+
+		new Chart(this.element.nativeElement, {
+			type: "bar",
 			data: {
-				labels: this.labels,
+				labels: chartData.labels,
+
 				datasets: [
 					{
-						data: this.data,
+						data: chartData.dataList,
 						backgroundColor: [
 							"#f30",
 							"#235",
@@ -56,6 +39,7 @@ export class BarChartComponent implements OnInit {
 						]
 					}
 				]
+
 			},
 			options: {
 				scales: {
@@ -76,25 +60,25 @@ export class BarChartComponent implements OnInit {
 						}
 					}
 				},
-				plugins: {
-					title: {
-						display: true,
-						fullSize: true,
-						color: "black",
-						font: {
-							size: 60
-						},
-						text: this.title
+			plugins: {
+				title: {
+					display: true,
+					fullSize: true,
+					color: "black",
+					font: {
+						size: 60
 					},
-					legend: {
-						display: false
-					}
+					text: chartData.title
 				},
-				responsive: true,
-				maintainAspectRatio: true
+				legend: {
+					display: false
+				}
+			},
+			responsive: true,
+			maintainAspectRatio: true
 
-			}
+		}
 		})
 
-  }
+	}
 }

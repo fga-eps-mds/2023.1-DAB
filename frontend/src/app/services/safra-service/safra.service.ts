@@ -17,23 +17,23 @@ export class SafraService extends HttpBaseService {
   }
 
   // criar uma interface para esse retorno..
-  listAreaPlantada(): Observable<any> {
-    return this.httpGet(this.endpointPlantada);
+  listAreaPlantada(idLocale: number): Observable<any> {
+    return this.httpGet(`${this.endpointPlantada}/${idLocale}`);
   }
 
   // criar uma interface para esse retorno..
-  listAreaColhida(): Observable<any> {
-    return this.httpGet(this.endpointColhida);
+  listAreaColhida(idLocale: number): Observable<any> {
+    return this.httpGet(`${this.endpointColhida}/${idLocale}`);
   }
 
   // criar uma interface para esse retorno..
-  listQuantidadeProduzida(): Observable<any> {
-    return this.httpGet(this.endpointProducao);
+  listQuantidadeProduzida(idLocale: number): Observable<any> {
+    return this.httpGet(`${this.endpointProducao}/${idLocale}`);
   }
 
   // criar uma interface para esse retorno..
-  listRendimentoMedio(): Observable<any> {
-    return this.httpGet(this.endpointRendimento);
+  listRendimentoMedio(idLocale: number): Observable<any> {
+    return this.httpGet(`${this.endpointRendimento}/${idLocale}`);
   }
 
 }

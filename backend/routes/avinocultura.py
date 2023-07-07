@@ -1,20 +1,20 @@
 from enum import Enum
 from fastapi import APIRouter, HTTPException
-from config.db import db, fetch_data
-from script.models import IbgeData
+from config.db import fetch_one
+from script.models import ChartData
 
-avinocultura = APIRouter(prefix="/avinocultura")
-collection = db.avicultura
+avicultura = APIRouter(prefix="/avinocultura")
+COLLECTION = "AVICULTURA"
 
 class Code(str, Enum):
-    poedeiras = "1988"
-    ovos_produzidos = "29"
-    producao_consumo = "9588"
-    producao_incubacao = "9589"
-    populacao = "2209"
+    POEDEIRAS = "1988"
+    OVOS_PRODUZIDOS = "29"
+    PRODUCAO_CONSUMO = "9588"
+    PRODUCAO_INCUBACAO = "9589"
+    POPULACAO = "2209"
 
-@avinocultura.get("/{code}", tags=["avicultura"])
-async def dados_avicultura(code : Code) -> IbgeData:
+@avicultura.get("/{code}", tags=["avicultura"])
+async def dados_avicultura(code : Code) -> ChartData:
     """
     **Code**
     -   1988    : Número de cabeças de galinhas poeiras
@@ -24,8 +24,8 @@ async def dados_avicultura(code : Code) -> IbgeData:
     -   2209    : Número de cabeças
     """
     search = {"id" : code.value}
-    response = await fetch_data(collection, search)
+    response = await fetch_one(COLLECTION, search)
     if response is None:
         raise HTTPException(status_code=404)
-    ibge_data : IbgeData = IbgeData(**response)
+    ibge_data : ChartData = ChartData(**response)
     return ibge_data

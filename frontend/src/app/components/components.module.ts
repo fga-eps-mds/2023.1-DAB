@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CardComponent } from './card/card.component';
-import { FooterComponent } from './footer/footer.component';
 import { MapComponent } from './map/map.component';
 
+import { RouterLink } from '@angular/router';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -13,19 +14,21 @@ import { MapComponent } from './map/map.component';
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-		FooterComponent,
         MapComponent,
   
+  		LoaderComponent
 	],
 	imports: [
-		CommonModule
+		CommonModule,
+		RouterLink
 	],
 	exports: [
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-		FooterComponent,
-		MapComponent
+		
+		MapComponent,
+		LoaderComponent
 	]
 })
 export class ComponentsModule { }

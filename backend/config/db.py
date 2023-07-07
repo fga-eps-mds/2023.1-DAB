@@ -1,5 +1,4 @@
 import os
-
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from pymongo.collection import Collection
@@ -15,6 +14,13 @@ uri = f"mongodb+srv://{DB_USER}:{DB_PASS}@cluster0.b5iy3zl.mongodb.net/?retryWri
 client = MongoClient(uri, server_api=ServerApi('1'))
 db = client.DAB
 
-async def fetch_data(collection : Collection, search : dict):
-    response = collection.find_one(search)
+def insert_data(collection: str, data):
+    db[collection].insert_many(data)
+
+async def fetch_one(collection: str, search: dict):
+    response = db[collection].find_one(search)
+    return response
+
+async def fetch_list(collection : str, search : dict):
+    response = db[collection].find(search)
     return response
