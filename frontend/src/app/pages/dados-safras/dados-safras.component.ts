@@ -13,7 +13,7 @@ export class DadosSafrasComponent {
 
   cards: Card[] = [{
     id: 'arroz',
-    imagemUrl: './assets/porco.png',
+    imagemUrl: './assets/rice.png',
     nome: 'Arroz',
     desc1: 'Dados referentes à',
     desc2: 'a safra anual',
@@ -21,7 +21,7 @@ export class DadosSafrasComponent {
   }, 
   {
     id: 'feijao',
-    imagemUrl: './assets/vaquinha.png',
+    imagemUrl: './assets/feijao.png',
     nome: 'Feijao',
     desc1: 'Dados referentes à',
     desc2: 'a safra anual',
@@ -29,7 +29,7 @@ export class DadosSafrasComponent {
   }, 
   {
     id: 'milho',
-    imagemUrl: './assets/galinha.png',
+    imagemUrl: './assets/milho.png',
     nome: 'Milho',
     desc1: 'Dados referentes à',
     desc2: 'a safra anual',
@@ -37,7 +37,7 @@ export class DadosSafrasComponent {
   },
   {
     id: 'soja',
-    imagemUrl: './assets/galinha.png',
+    imagemUrl: './assets/soja.png',
     nome: 'Soja',
     desc1: 'Dados referentes à',
     desc2: 'a safra anual ',
