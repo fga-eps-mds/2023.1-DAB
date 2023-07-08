@@ -12,7 +12,7 @@ export class CarouselComponent {
       title: 'SAFRAS',
       description: 'Dados referentes a safras no último trimestre',
       hovered: false,
-      link: '#'
+      link: 'safra'
     },
     {
       image: '../../../assets/pecuaria.jpg',

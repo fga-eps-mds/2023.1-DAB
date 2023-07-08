@@ -1,11 +1,8 @@
-<h1> Monitoramento da Pecuária</h1>    
+<h1> {{ title }}</h1>    
 
-<div class="container">
-    <div class="card" *ngFor="let card of cards">
-        <a [routerLink]="['/pecuaria', card.id]">
-            <img class="animal" [src]="card.imagemUrl" alt="animal">
-            <p class="nome">{{ card.nome }}</p>
-            <p class="descricao">{{ card.desc1 }}<br>{{ card.desc2 }}<br>{{ card.desc3 }}</p>
-        </a>
-    </div>
+<div class="card">
+        <img class="animal" [src]="content.imagemUrl" alt="animal">
+        <p class="nome">{{ content.nome }}</p>
+        <p class="descricao">{{ content.desc1 }}<br>{{ content.desc2 }}<br>{{ content.desc3 }}</p>
 </div>
+

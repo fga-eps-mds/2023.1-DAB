@@ -1,0 +1,9 @@
+export interface Card {
+    id: string;
+    imagemUrl: string;
+    nome: string;
+    // a descrição foi quebrada em três linhas nos cards.. por isso os três campos para descrição
+    desc1: string;
+    desc2: string;
+    desc3: string;
+  }

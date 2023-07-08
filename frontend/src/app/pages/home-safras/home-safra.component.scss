@@ -1,0 +1,35 @@
+@import '../../../dist/scss/variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    position: absolute;
+    top: 120px;
+    font-size: 40px;
+    line-height: 1.5;
+    color: #000000;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h2{
+    position: absolute;
+    top: 180px;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #000000;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+

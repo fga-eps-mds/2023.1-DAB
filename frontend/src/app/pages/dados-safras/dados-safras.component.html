@@ -1,0 +1,24 @@
+
+<app-header></app-header>
+
+<ng-template #loading>
+	<app-loader></app-loader>
+</ng-template>
+
+<div class = "container">
+	<div *ngFor="let card of cards">
+		<app-card
+		  [content]="card"
+			(click) = "getSafra(card.id)">
+		</app-card>
+	</div>
+</div>
+
+
+<div *ngIf="load else loading">
+	<app-bar-chart 
+		*ngFor="let chart of charts" 
+		[chart]="chart"
+		>
+	</app-bar-chart>
+</div>
