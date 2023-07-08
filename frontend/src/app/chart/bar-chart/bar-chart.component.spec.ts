@@ -1,8 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BarChartComponent } from './bar-chart.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { IbgeApiService } from 'src/app/service/ibge-api.service';
+
 
 describe('BarChartComponent', () => {
   let component: BarChartComponent;
@@ -14,7 +13,7 @@ describe('BarChartComponent', () => {
         BarChartComponent
       ],
       imports: [HttpClientTestingModule],
-      providers: [IbgeApiService] 
+      providers: [] 
     });
     fixture = TestBed.createComponent(BarChartComponent);
     component = fixture.componentInstance;
