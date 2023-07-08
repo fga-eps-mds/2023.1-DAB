@@ -20,7 +20,7 @@ enum DataId {
 export class DadosPecuariosComponent implements OnInit{
 
 	charts: Array<ChartData> = [];
-	load: boolean = false;
+	load = false;
 
 	// Injeção de dependências
 	constructor (
@@ -41,7 +41,7 @@ export class DadosPecuariosComponent implements OnInit{
 		const routerParams = this.route.snapshot.paramMap;
 		const dataId = routerParams.get("dadosId") ?? "";
 
-		let charts: Array<ChartData> = [];
+		const charts: Array<ChartData> = [];
 		
 		switch(dataId) {
 			case DataId.BOVINO:

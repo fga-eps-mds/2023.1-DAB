@@ -44,11 +44,10 @@ export class DadosSafrasComponent {
     desc3 : 'de soja'
   }
 
-
 ]
 
   charts: Array<ChartData> = [];
-	load: boolean = false;
+	load = false;
 
   constructor(
     private route:ActivatedRoute,
@@ -61,17 +60,9 @@ export class DadosSafrasComponent {
     const routerParams = this.route.snapshot.paramMap;
 		const EstadoID = routerParams.get("EstadoID") ?? "";
     this.safraService.request(type, EstadoID).subscribe((res)=>{
-      this.charts=res;
+      this.charts = res;
       this.load = true;
       
     });
   }
-
-  ngOnInit() {
-		//this.charts = this.loadData();
-		
-	}
-
-
-
 }

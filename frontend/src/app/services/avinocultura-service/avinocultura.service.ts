@@ -1,6 +1,7 @@
 import { Injectable, Injector } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpBaseService } from 'src/app/shared/http-base-service/http-base.service';
+import { ChartData } from 'src/app/interfaces/ChartData';
 
 @Injectable({
   providedIn: 'root'
@@ -18,27 +19,27 @@ export class AvinoculturaService extends HttpBaseService {
   }
 
   // criar uma interface para esse retorno..
-  listGalinhasPoeiras(): Observable<any> {
+  listGalinhasPoeiras(): Observable<ChartData> {
     return this.httpGet(this.endpointCabecasGalinhasPoeiras);
   }
 
   // criar uma interface para esse retorno..
-  listOvosProduzidos(): Observable<any> {
+  listOvosProduzidos(): Observable<ChartData> {
     return this.httpGet(this.endpointOvosProduzidos);
   }
 
   // criar uma interface para esse retorno..
-  listOvosProduzidosConsumo(): Observable<any> {
+  listOvosProduzidosConsumo(): Observable<ChartData> {
     return this.httpGet(this.endpointOvosProduzidosConsumo);
   }
 
   // criar uma interface para esse retorno..
-  listOvosProduzidosIncubacao(): Observable<any> {
+  listOvosProduzidosIncubacao(): Observable<ChartData> {
     return this.httpGet(this.endpointOvosProduzidosIncubacao);
   }
 
   // criar uma interface para esse retorno..
-  listCabecas(): Observable<any> {
+  listCabecas(): Observable<ChartData> {
     return this.httpGet(this.endpointCabecas);
   }
 

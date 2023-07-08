@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class HttpBaseService {
 
-  private apiBase: string = 'http://localhost:8000/';     // rota base da API
+  private apiBase = 'http://localhost:8000/';     // rota base da API
   private readonly httpClient!: HttpClient;
 
   constructor(protected readonly injector: Injector) { 
@@ -22,8 +22,10 @@ export class HttpBaseService {
 
   }
 
+	/*eslint-disable  @typescript-eslint/no-explicit-any*/
   protected httpGet(endpoint: string): Observable<any> {      // método que vai ser herdado pelas classes filhas..
     return this.httpClient.get(`${this.apiBase}${endpoint}`);
   }
+	/*eslint-disable  @typescript-eslint/no-explicit-any*/
 
 }

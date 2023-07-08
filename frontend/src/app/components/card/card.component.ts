@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 export interface Card {
   id: string;
@@ -19,16 +18,6 @@ export interface Card {
 
 export class CardComponent{
   
-  @Input() content!: Card;
-  @Input() title!:string;
-  constructor(private router: ActivatedRoute) {}
-
-	ngOnInit() {
-		
-	}
-
-	dados: String = "";
-
-  
-
+  @Input() content! : Card;
+  @Input() title! : string;
 }
