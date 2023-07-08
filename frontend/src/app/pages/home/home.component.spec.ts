@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
-import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { CardComponent } from 'src/app/components/card/card.component';
 
 describe('HomeComponent', () => {
@@ -14,7 +13,6 @@ describe('HomeComponent', () => {
       declarations: [
         HomeComponent,
         HeaderComponent,
-        FooterComponent,
         CardComponent
       ]
     });

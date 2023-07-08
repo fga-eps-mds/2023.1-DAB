@@ -1,2 +1,12 @@
 <app-header></app-header>
-<app-card></app-card>
+
+<div class="container">
+    <div *ngFor="let card of cards">
+        <a [routerLink]="[card.id]">
+            <app-card
+            [content]="card">
+            </app-card>
+        </a>
+    </div>
+</div>
+

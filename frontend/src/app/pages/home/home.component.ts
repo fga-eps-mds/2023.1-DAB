@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Card } from 'src/app/interfaces/Card';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  cards: Card[] = [{
+    id: 'suinocultura',
+    imagemUrl: './assets/porco.png',
+    nome: 'Suinocultura',
+    desc1: 'Dados referentes à',
+    desc2: 'suinocultura do último',
+    desc3 : 'trimestre'
+  }, 
+  {
+    id: 'bovinocultura',
+    imagemUrl: './assets/vaquinha.png',
+    nome: 'Bovinocultura',
+    desc1: 'Dados referentes à',
+    desc2: 'bovinocultura do último',
+    desc3 : 'trimestre'
+  }, 
+  {
+    id: 'avinocultura',
+    imagemUrl: './assets/galinha.png',
+    nome: 'Avinocultura',
+    desc1: 'Dados referentes à',
+    desc2: 'avicultura do último',
+    desc3 : 'trimestre'
+  }]
 
+  constructor(private router:ActivatedRoute){
+    
+  }
 }
