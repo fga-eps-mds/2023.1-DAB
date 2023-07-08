@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException
 from config.db import fetch_one
 from script.models import ChartData
 
-bovinocultura = APIRouter(prefix="/bovinocultura", tags=["Bovinocultura"])
+bovinocultura = APIRouter(prefix="/bovinocultura", tags=["Pecuária"])
 COLLECTION = "BOVINOCULTURA"
 
 class Code(str, Enum):
