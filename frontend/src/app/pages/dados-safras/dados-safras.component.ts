@@ -72,31 +72,6 @@ export class DadosSafrasComponent {
 		
 	}
 
-  loadData(): Array<ChartData>{
-    const routerParams = this.route.snapshot.paramMap;
-		const EstadoID = routerParams.get("EstadoID") ?? "";
-    
-    let charts: Array<ChartData> = [];
-
-    this.safraService.listArroz(EstadoID).subscribe((res) =>{
-        charts.push(res);
-    })
-
-    this.safraService.listFeijao(EstadoID).subscribe((res) =>{
-      charts.push(res);
-    })
-
-    this.safraService.listMilho(EstadoID).subscribe((res) =>{
-      charts.push(res);
-    })
-
-    this.safraService.listSoja(EstadoID).subscribe((res) =>{
-      charts.push(res);
-    })
-    
-    this.load = true;
-    return charts;
-  }
 
 
 }
