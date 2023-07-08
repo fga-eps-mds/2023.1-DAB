@@ -16,32 +16,32 @@ export class DadosSafrasComponent {
     imagemUrl: './assets/porco.png',
     nome: 'Arroz',
     desc1: 'Dados referentes à',
-    desc2: 'suinocultura do último',
-    desc3 : 'trimestre'
+    desc2: 'a safra anual',
+    desc3 : 'arroz'
   }, 
   {
     id: 'feijao',
     imagemUrl: './assets/vaquinha.png',
     nome: 'Feijao',
     desc1: 'Dados referentes à',
-    desc2: 'bovinocultura do último',
-    desc3 : 'trimestre'
+    desc2: 'a safra anual',
+    desc3 : 'de feijao'
   }, 
   {
     id: 'milho',
     imagemUrl: './assets/galinha.png',
     nome: 'Milho',
     desc1: 'Dados referentes à',
-    desc2: 'avicultura do último',
-    desc3 : 'trimestre'
+    desc2: 'a safra anual',
+    desc3 : 'de milho'
   },
   {
     id: 'soja',
     imagemUrl: './assets/galinha.png',
     nome: 'Soja',
     desc1: 'Dados referentes à',
-    desc2: 'avicultura do último',
-    desc3 : 'trimestre'
+    desc2: 'a safra anual ',
+    desc3 : 'de soja'
   }
 
 
