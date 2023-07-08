@@ -14,9 +14,8 @@ import { LoaderComponent } from './loader/loader.component';
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-        MapComponent,
-  
-  		LoaderComponent
+		MapComponent,
+		LoaderComponent
 	],
 	imports: [
 		CommonModule,
@@ -26,7 +25,6 @@ import { LoaderComponent } from './loader/loader.component';
 		HeaderComponent,
 		CarouselComponent,
 		CardComponent,
-		
 		MapComponent,
 		LoaderComponent
 	]

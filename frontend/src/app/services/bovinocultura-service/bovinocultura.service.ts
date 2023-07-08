@@ -1,8 +1,6 @@
 import { Injectable, Injector } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { HttpClient } from '@angular/common/http';
-
 import { HttpBaseService } from 'src/app/shared/http-base-service/http-base.service';
 import { ChartData } from 'src/app/interfaces/ChartData';
 
@@ -21,17 +19,17 @@ export class BovinoCulturaService extends HttpBaseService {
   }
 
   // criar uma interface para esse retorno..
-  listAbatidos(): Observable<any> {
+  listAbatidos(): Observable<ChartData> {
     return this.httpGet(this.endpointAbatidos);
   }
 
   // criar uma interface para esse retorno..
-  listPeso(): Observable<any> {
+  listPeso(): Observable<ChartData> {
     return this.httpGet(this.endpointPeso);
   }
 
   //// criar uma interface para esse retorno..
-  listCabecas(): Observable<any> {
+  listCabecas(): Observable<ChartData> {
    return this.httpGet(this.endpointPopulacao);
   }
 

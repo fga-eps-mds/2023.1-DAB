@@ -21,7 +21,8 @@ import { DadosSafrasComponent } from './dados-safras/dados-safras.component';
     HomePageComponent,
     HomeSafraComponent,
     InformationPageComponent,
-    DadosSafrasComponent
+    DadosSafrasComponent,
+
   ],
   imports: [
     CommonModule,
