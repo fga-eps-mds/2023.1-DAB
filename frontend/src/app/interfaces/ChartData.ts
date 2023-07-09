@@ -5,5 +5,5 @@ export interface ChartData {
 	type: string;
 	title: string;
 	labels: string[];
-	dataList: string[];
+	dataList: number[];
 }
