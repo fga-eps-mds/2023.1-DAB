@@ -20,11 +20,12 @@ h1 {
 
 
 .card {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 6px;
+    border-radius: 25px;
     width: 20vw;
     height: 500px;
     transition: background-color 0.5s ease;
