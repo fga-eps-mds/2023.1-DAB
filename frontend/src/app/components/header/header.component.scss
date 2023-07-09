@@ -49,13 +49,15 @@ nav{
     right: 40px;
 }
 
-
-
 .logo{
     position: relative;
     left: 50px;
     top: 50%;
     height: auto; 
     width: 100px;
+    transition: .3s ease;
 }
 
+.logo:hover{
+    transform: scale(1.1);
+}
