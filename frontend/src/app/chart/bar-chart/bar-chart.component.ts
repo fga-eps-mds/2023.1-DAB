@@ -18,7 +18,6 @@ export class BarChartComponent implements OnInit {
 
 	ngOnInit(): void {
 		Chart.register(...registerables);
-		//console.log(this.chart)
 		this.createChart("bar")
 	}
 
@@ -28,7 +27,6 @@ export class BarChartComponent implements OnInit {
 	}
 
 	createChart(type: ChartType): void {
-
 		this.object = new Chart(this.element.nativeElement, {
 			type: type,
 			data: {
@@ -80,8 +78,6 @@ export class BarChartComponent implements OnInit {
 				}
 			},
 			responsive: true,
-			maintainAspectRatio: true
-
 		}
 		})
 
