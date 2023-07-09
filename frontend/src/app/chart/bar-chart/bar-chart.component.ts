@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { Chart, registerables } from 'chart.js';
+import { Chart, ChartType, registerables } from 'chart.js';
 
 import { ChartData } from 'src/app/interfaces/ChartData';
 
@@ -14,24 +14,29 @@ export class BarChartComponent implements OnInit {
 
 	@Input() chart!: ChartData;
 
+	private object!: Chart;
 
 	ngOnInit(): void {
 		Chart.register(...registerables);
 		//console.log(this.chart)
-		this.createChart(this.chart)
+		this.createChart("bar")
 	}
 
+	changeChart(type: ChartType){
+		this.object.destroy()
+		this.createChart(type)
+	}
 
-	createChart(chartData: ChartData): void {
+	createChart(type: ChartType): void {
 
-		new Chart(this.element.nativeElement, {
-			type: "bar",
+		this.object = new Chart(this.element.nativeElement, {
+			type: type,
 			data: {
-				labels: chartData.labels,
+				labels: this.chart.labels,
 
 				datasets: [
 					{
-						data: chartData.dataList,
+						data: this.chart.dataList,
 						backgroundColor: [
 							"#f30",
 							"#235",
@@ -68,7 +73,7 @@ export class BarChartComponent implements OnInit {
 					font: {
 						size: 60
 					},
-					text: chartData.title
+					text: this.chart.title
 				},
 				legend: {
 					display: false

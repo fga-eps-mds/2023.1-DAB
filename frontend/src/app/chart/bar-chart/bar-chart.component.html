@@ -1,3 +1,9 @@
 <div>
-	<canvas #barchart></canvas>
+	<canvas width="100%" height="40%" #barchart></canvas>
+<button type="button" (click)="changeChart('bar')">
+		barras
+	</button>
+	<button type="button" (click)="changeChart('line')">
+		linha
+	</button>
 </div>
