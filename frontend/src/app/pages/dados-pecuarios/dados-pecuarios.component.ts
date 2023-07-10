@@ -50,27 +50,26 @@ export class DadosPecuariosComponent implements OnInit{
 					charts.push(abatidos);		// adiciona a requisição ao array que será retornado nessa função...
 				});
 
-				this.bovinoculturaService.listCabecas().subscribe((cabecas) => {
-					charts.push(cabecas);
-				})
-
 				this.bovinoculturaService.listPeso().subscribe((peso) => {
 					charts.push(peso);
 
 					this.load = true;				// após as requisições serem feitas, o load recebe true
 				});
 
+				this.bovinoculturaService.listCabecas().subscribe((cabecas) => {
+					charts.push(cabecas);
+				})
+
 			break;
 
 			case DataId.SUINO:
 
-				this.suinoculturaService.listAbatidos().subscribe((abatidos) => {
-					charts.push(abatidos);
-				});
-
 				this.suinoculturaService.listCabecas().subscribe((cabecas) => {
 					charts.push(cabecas);
 				})
+				this.suinoculturaService.listAbatidos().subscribe((abatidos) => {
+					charts.push(abatidos);
+				});
 
 				this.suinoculturaService.listPeso().subscribe((peso) => {
 					charts.push(peso);
