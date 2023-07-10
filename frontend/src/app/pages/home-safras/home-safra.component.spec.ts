@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HeaderComponent } from 'src/app/components/header/header.component';
 import { HomeSafraComponent } from './home-safra.component';
 
 describe('HomeSafraComponent', () => {
@@ -8,7 +8,10 @@ describe('HomeSafraComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeSafraComponent]
+      declarations: [
+        HomeSafraComponent,
+        HeaderComponent
+      ]
     });
     fixture = TestBed.createComponent(HomeSafraComponent);
     component = fixture.componentInstance;
