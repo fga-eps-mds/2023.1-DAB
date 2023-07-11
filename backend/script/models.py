@@ -23,7 +23,7 @@ class IbgeData(BaseModel):
 
 class ChartData(BaseModel):
     id: str
-    locale: str
+    locale: None | str
     categoria: None | str
     type: str
     title: str
