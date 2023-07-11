@@ -32,13 +32,14 @@ export class BarChartComponent implements OnInit {
     	}        
 		return avg
 	}
+	/*eslint-disable  @typescript-eslint/no-explicit-any*/
 	getMax(array: any[]): string{
 		const max = Math.max(...array);
 		const index = array.indexOf(max.toString());
 		return this.chart.labels[index];
 
 	}
-
+	/*eslint-disable  @typescript-eslint/no-explicit-any*/
  
 	changeChart(type: ChartType){
 		this.object.destroy()
