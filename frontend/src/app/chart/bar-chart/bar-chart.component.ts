@@ -29,7 +29,7 @@ export class BarChartComponent implements OnInit {
 		for (let i= 0; i <this.chart.dataList.length; i++){
 			const a= this.chart.dataList[i]/this.chart.dataList.length
 			avg += Math.trunc(a)
-    	}
+		}
 		return avg
 	}
 	/*eslint-disable  @typescript-eslint/no-explicit-any*/
