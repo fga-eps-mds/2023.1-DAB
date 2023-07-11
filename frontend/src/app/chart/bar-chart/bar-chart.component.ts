@@ -63,13 +63,19 @@ export class BarChartComponent implements OnInit {
 						}
 					}
 				},
+				
 			plugins: {
 				title: {
 					display: true,
 					fullSize: true,
 					color: "black",
 					font: {
-						size: 60
+						size: 35,
+
+					},
+					padding: {
+						top: 80, // adiciona 20px de margem superior
+						bottom: 80// adiciona 20px de margem inferior
 					},
 					text: this.chart.title
 				},

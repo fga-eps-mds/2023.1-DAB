@@ -1,12 +1,38 @@
 
 .container {
 	display: grid;
-	grid-template-columns: 90% 10%
+	grid-template-columns:20% 72% 8%
 }
+h1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-style: bold;
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    margin-top: 280px;
+}
+h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+}
+h3 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-style: bold;
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    margin-top: 30px;
+}
+
 .buttons {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
 	button {
 		margin-top: 30px;
 		border: none;
@@ -15,7 +41,7 @@
 	img{
 		transition: .3s ease;	
 		cursor: pointer;
-		width: 120px;
+		width: 60px;
 	}
 
 	img:hover{
