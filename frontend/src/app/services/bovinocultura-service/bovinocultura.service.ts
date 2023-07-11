@@ -29,7 +29,7 @@ export class BovinoCulturaService extends HttpBaseService {
   }
 
   //// criar uma interface para esse retorno..
-  listCabecas(): Observable<any> {
+  listCabecas(): Observable<ChartData> {
    return this.httpGet(this.endpointPopulacao);
   }
 

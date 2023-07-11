@@ -36,7 +36,12 @@ export class DadosPecuariosComponent implements OnInit{
 		
 		console.log(this.charts);
 	}
+	setTitle(): string{
+		const routerParams = this.route.snapshot.paramMap;
+		const dataId = routerParams.get("dadosId") ?? "";
 
+		return dataId.toUpperCase()
+	}
 	loadData(): Array<ChartData> {
 		const routerParams = this.route.snapshot.paramMap;
 		const dataId = routerParams.get("dadosId") ?? "";
