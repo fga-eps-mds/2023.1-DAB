@@ -26,10 +26,10 @@ export class BarChartComponent implements OnInit {
 	}
 	media(): number{
 		let avg = 0
-	  	for (let i = 0; i < this.chart.dataList.length; i++) {
-			let a = this.chart.dataList[i]/this.chart.dataList.length
-        	avg += Math.trunc(a)
-    	}        
+		for (let i= 0; i <this.chart.dataList.length; i++){
+			const a= this.chart.dataList[i]/this.chart.dataList.length
+			avg += Math.trunc(a)
+    	}
 		return avg
 	}
 	/*eslint-disable  @typescript-eslint/no-explicit-any*/
