@@ -16,11 +16,30 @@ export class BarChartComponent implements OnInit {
 
 	private object!: Chart;
 
+	max!:string;
+
 	ngOnInit(): void {
 		Chart.register(...registerables);
 		this.createChart("bar")
+		this.max= this.getMax(this.chart.dataList);
+		console.log(this.max)
+	}
+	media(): number{
+		let avg = 0
+	  	for (let i = 0; i < this.chart.dataList.length; i++) {
+			let a = this.chart.dataList[i]/this.chart.dataList.length
+        	avg += Math.trunc(a)
+    	}        
+		return avg
+	}
+	getMax(array: any[]): string{
+		const max = Math.max(...array);
+		const index = array.indexOf(max.toString());
+		return this.chart.labels[index];
+
 	}
 
+ 
 	changeChart(type: ChartType){
 		this.object.destroy()
 		this.createChart(type)
