@@ -63,7 +63,7 @@
         entre em contato conosco<br/> copiando o endereço de email abaixo. 
         <br/>Nossa equipe terá prazer em ajudar!
       </p>
-      <div class="send-email-bt" (click)="copyToClipboard()">Copiar Email</div>
+      <div class="send-email-bt" (click)="copyToClipboard()"  (keyup)="handleKeyUp($event)" tabindex="0">Copiar Email</div>
       <div class="clipboard-message" *ngIf="isCopied">Email "dab2023.br@gmail.com" copiado para a área de transferência!</div>
     </div>
     <div class="info-image">

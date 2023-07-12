@@ -7,8 +7,8 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
   dataItems: number[] = [0, 0, 0, 0];
-  messageToCopy: string = "dab2023.br@gmail.com";
-  isCopied: boolean = false;
+  messageToCopy = "dab2023.br@gmail.com";
+  isCopied = false;
 
   constructor(private renderer: Renderer2) { }
 
@@ -47,5 +47,11 @@ export class HomePageComponent implements OnInit {
     this.renderer.removeChild(document.body, element);
   
     this.isCopied = true;
+  }
+
+  handleKeyUp(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.copyToClipboard();
+    }
   }
 }
