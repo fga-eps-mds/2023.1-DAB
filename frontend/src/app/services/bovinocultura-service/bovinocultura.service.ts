@@ -12,7 +12,7 @@ export class BovinoCulturaService extends HttpBaseService {
 
   private endpointAbatidos = 'bovinocultura/284';
   private endpointPeso = 'bovinocultura/285';
-  private endpointPopulacao = 'bovinocultura/2209';
+  private endpointPopulacao = 'populacao/bovinos';
 
   constructor(protected override readonly injector: Injector) {
     super(injector);
@@ -29,7 +29,7 @@ export class BovinoCulturaService extends HttpBaseService {
   }
 
   //// criar uma interface para esse retorno..
-  listCabecas(): Observable<ChartData> {
+  listCabecas(): Observable<any> {
    return this.httpGet(this.endpointPopulacao);
   }
 

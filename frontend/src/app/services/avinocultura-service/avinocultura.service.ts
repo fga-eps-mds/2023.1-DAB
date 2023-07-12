@@ -12,7 +12,7 @@ export class AvinoculturaService extends HttpBaseService {
   private endpointOvosProduzidos = 'avinocultura/29';
   private endpointOvosProduzidosConsumo = 'avinocultura/9588';
   private endpointOvosProduzidosIncubacao = 'avinocultura/9589';
-  private endpointCabecas = 'avinocultura/2209';
+  private endpointCabecas = 'populacao/aves';
 
   constructor(protected override readonly injector: Injector) {
     super(injector);
