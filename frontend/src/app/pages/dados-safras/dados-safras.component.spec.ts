@@ -1,51 +1,40 @@
-import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
-import { DadosSafrasComponent } from './dados-safras.component';
-import { SafraService } from 'src/app/services/safra-service/safra.service';
-import { ChartData } from 'src/app/interfaces/ChartData';
+import { HttpClientModule } from '@angular/common/http'; 
 import { of } from 'rxjs';
+import { HeaderComponent } from 'src/app/components/header/header.component';
+import { DadosSafrasComponent } from './dados-safras.component';
+import { LoaderComponent } from 'src/app/components/loader/loader.component';
 
 describe('DadosSafrasComponent', () => {
   let component: DadosSafrasComponent;
   let fixture: ComponentFixture<DadosSafrasComponent>;
-  let activatedRoute: ActivatedRoute;
-  let safraService: SafraService;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [DadosSafrasComponent],
-      providers: [
-        {
-          provide: ActivatedRoute,
-          useValue: {
-            snapshot: {
-              paramMap: {
-                get: (param: string) => {
-                  if (param === 'EstadoID') {
-                    return 'estadoIdValue'; // Valor simulado para o parâmetro 'EstadoID'
-                  }
-                  return null;
-                }
-              }
-            }
-          }
-        },
-        {
-          provide: SafraService,
-          useValue: {
-            request: jasmine.createSpy('request').and.returnValue(of([])) // Simula o retorno vazio do serviço
-          }
+    const activatedRouteMock = {
+      snapshot: {
+        paramMap: {
+          get: (param: string) => ''
         }
-      ]
+      }
+    };
+
+    await TestBed.configureTestingModule({
+      declarations: [
+        DadosSafrasComponent,
+        HeaderComponent,
+        LoaderComponent
+      ],
+      providers: [
+        { provide: ActivatedRoute, useValue: activatedRouteMock }
+      ],
+      imports: [HttpClientModule] // Adicionado HttpClientModule
     }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DadosSafrasComponent);
     component = fixture.componentInstance;
-    activatedRoute = TestBed.inject(ActivatedRoute);
-    safraService = TestBed.inject(SafraService);
-    fixture.detectChanges();
   });
 
   it('should create', () => {
