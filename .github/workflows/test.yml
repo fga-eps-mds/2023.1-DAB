@@ -25,6 +25,7 @@ jobs:
       run: ng test --code-coverage
       working-directory: ./frontend
 
-    - name: Upload coverage to Codecov
-      run: bash <(curl -s https://codecov.io/bash) -Z
-      working-directory: ./frontend/coverage
+    - name: Upload coverage to Code Climate
+      run: npm install -g codeclimate-test-reporter && codeclimate-test-reporter < ./frontend/coverage/index.html
+      env:
+        CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_REPORTER_ID }}
