@@ -1,0 +1,30 @@
+name: Testes
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  testes-unitarios-frontend:
+    runs-on: ubuntu-latest
+  
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install Dependencies
+      run: npm install
+      working-directory: ./frontend
+
+    - name: Install Dependencies
+      run: npm install
+      working-directory: ./frontend
+
+    - name: Run tests with code coverage
+      run: ng test --code-coverage
+      working-directory: ./frontend
+
+    - name: Upload coverage to Codecov
+      run: bash <(curl -s https://codecov.io/bash) -Z
+      working-directory: ./frontend/coverage
