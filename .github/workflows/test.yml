@@ -12,11 +12,6 @@ jobs:
   
     steps:
     - uses: actions/checkout@v2
-    
-    # # Import Code Climate
-    # - name: Import Code Climate
-    #   run: |
-    #     curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./frontend/coverage
 
     - name: Install Dependencies
       run: npm install
@@ -26,6 +21,8 @@ jobs:
       run: npm install -g @angular/cli
       working-directory: ./frontend
     
-    - name: Run tests 
-      run: npm run test
+    # Run Unit Tests
+    - name: Unit Tests
       working-directory: ./frontend
+      run: |
+        npm run test --code-coverage ./frontend
