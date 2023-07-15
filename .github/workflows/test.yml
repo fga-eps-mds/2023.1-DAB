@@ -28,7 +28,13 @@ jobs:
       run: ng test --code-coverage
       working-directory: ./frontend
 
-    # - name: Upload coverage to Code Climate
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run tests and generate coverage
+      run: ng test --code-coverage
+
+    #- name: Upload coverage to Code Climate
     #   run: npm install -g codeclimate-test-reporter && codeclimate-test-reporter < ./frontend/coverage/index.html
     #   env:
     #     CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_REPORTER_ID }}
