@@ -23,6 +23,7 @@ jobs:
 
     - name: Install Angular CLI
       run: npm install -g @angular/cli
+      working-directory: ./frontend
 
     - name: Run tests with code coverage
       run: ng test --code-coverage
@@ -30,6 +31,7 @@ jobs:
 
     - name: Run tests 
       run: ng test
+      working-directory: ./frontend
 
     #- name: Upload coverage to Code Climate
     #   run: npm install -g codeclimate-test-reporter && codeclimate-test-reporter < ./frontend/coverage/index.html
