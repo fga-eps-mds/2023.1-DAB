@@ -20,22 +20,10 @@ jobs:
     - name: Install Angular CLI
       run: npm install -g @angular/cli
       working-directory: ./frontend
-    
-    - name: Set up Chrome and ChromeDriver
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y wget unzip
-        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        sudo dpkg -i google-chrome-stable_current_amd64.deb
-        sudo apt-get install -y -f
-        wget https://chromedriver.storage.googleapis.com/$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
-        unzip chromedriver_linux64.zip
-        sudo mv chromedriver /usr/local/bin/
-        sudo chown root:root /usr/local/bin/chromedriver
-        sudo chmod +x /usr/local/bin/chromedriver
 
     # Run Unit Tests
     - name: Unit Tests
       run: |
           cd frontend
-          ng test --no-sandbox
+          npm install karma-phantomjs-launcher
+          ng test --browsers PhantomJS
