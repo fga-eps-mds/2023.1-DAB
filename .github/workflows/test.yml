@@ -38,4 +38,4 @@ jobs:
     - name: Unit Tests
       run: |
           cd frontend
-          ng test
+          ng test --no-sandbox
