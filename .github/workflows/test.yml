@@ -24,4 +24,4 @@ jobs:
     # Run Unit Tests
     - name: Unit Tests
       working-directory: ./frontend
-      run: npm run test 
+      run: ng test 
