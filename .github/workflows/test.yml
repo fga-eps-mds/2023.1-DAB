@@ -21,17 +21,20 @@ jobs:
       run: npm install -g @angular/cli
       working-directory: ./frontend
     
-    - name: Set up Xvfb
+
+    steps:
+    - name: Set up Chrome and ChromeDriver
       run: |
         sudo apt-get update
-        sudo apt-get install -y xvfb
-        export DISPLAY=:99
-
-    - name: Start Xvfb
-      run: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-
-    - name: Wait for Xvfb to start
-      run: sleep 3
+        sudo apt-get install -y wget unzip
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo dpkg -i google-chrome-stable_current_amd64.deb
+        sudo apt-get install -y -f
+        wget https://chromedriver.storage.googleapis.com/$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
+        unzip chromedriver_linux64.zip
+        sudo mv chromedriver /usr/local/bin/
+        sudo chown root:root /usr/local/bin/chromedriver
+        sudo chmod +x /usr/local/bin/chromedriver
 
     # Run Unit Tests
     - name: Unit Tests
