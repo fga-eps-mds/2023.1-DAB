@@ -26,4 +26,4 @@ jobs:
       run: |
           cd frontend
           npm install karma-phantomjs-launcher
-          ng test --browsers ChromeHeadless
+          ng test --browsers ChromeHeadless --watch=false
