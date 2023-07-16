@@ -9,7 +9,6 @@ nav ul li a {
     font-weight: 400;
     font-style: normal;
     line-height: 30px;
-    font-size: 15px;
     color: #000;
     text-decoration: none;
 }
@@ -18,43 +17,30 @@ nav ul li a:hover{
     color: #00B536;
 }
 
-header{
-    width: 100%;
-    height: 110px;
-    //position: absolute;
-    background-color: #EAEAEA;
-    z-index: 1; 
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #EAEAEA
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
 .nav-itens{
     list-style: none;
     display: flex;
-    right: 70px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+    align-items: flex-start;
+		height: 100%;
 }
 
 .nav-itens>li>a{
-    font-size:  23px;
-    padding-left: 50px;
-    color: #000;
-    right: 40px;
+    font-size: 1.3vw;
+    margin-right: 4vw;
 }
 
 .logo{
     position: relative;
-    left: 50px;
-    top: 50%;
+    left: 4vw;
     height: auto; 
-    width: 100px;
+    width: 8.5vw;
     transition: .3s ease;
 }
 
