@@ -15,21 +15,21 @@ As depedências do projeto são gerenciadas com a ferramenta [pip-tools](https:/
 Execute o seguinte comando para instalá-lo:
 
 ```sh
-$ pip install pip-tools
+pip install pip-tools
 ```
 
 Em seguida execute o seguinte comando para instalar todas as depedências
 do projeto
 
 ```sh
-$ pip-sync backend/requirements/*.txt
+pip-sync backend/requirements/*.txt
 ```
 
 Inicie o servidor com
 
 ```sh
-$ cd backend
-$ uvicorn app:app --reload
+cd backend
+uvicorn app:app --reload
 ```
 O servidor por padrão é iniciado na porta 8000.
 
@@ -37,10 +37,13 @@ Acesse `localhost:8000/docs` para ver o documentação no Swagger.
 
 ### Frontend
 
-TODO
+Acesse o diretório frontend e instale as dependências com `npm install`. Agora basta executar:
 
+```sh
+ng serve
+```
 
-
+Pronto! A aplicação estará funcionando na porta 4200.
 
 ### :handshake:  Colaboradores:
 
