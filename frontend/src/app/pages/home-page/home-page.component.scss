@@ -75,17 +75,14 @@
   
 }
 
-
 .banner {
-    content: "";
-    position: relative;
+		align-items: center;
     width: 100%;
-    margin-bottom: 0;
-    flex-direction: column;
+		background-position: center;
     background-size: cover;
     background-image: url('../../../assets/BA.png');
-    width: 100%;
-    height: 800PX;
+    height: 80vh;
+		//background-color: blue;
 }
 
   .banner-text{
@@ -95,15 +92,17 @@
     left:5%;
     font-style: normal;
     font-weight: 800;
-    font-size: 60px;
+    font-size: 3.5vw;
     display: flex;
     align-items: center;
     letter-spacing: -0.005em;
     color: #363636;
+		width: 50vw;
+		transform:translate(0, 3.0vh)
   }
 
 .green-bar {
-  height: 140px;
+  height: 20vh;
   background-color: #335555;
   display: flex;
   justify-content: space-between;

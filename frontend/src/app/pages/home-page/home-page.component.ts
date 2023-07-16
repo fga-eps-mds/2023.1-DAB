@@ -13,8 +13,14 @@ export class HomePageComponent implements OnInit {
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
+		this.changeHeader();
     this.updateDataItems();
   }
+
+	changeHeader(){
+		const header = document.getElementsByTagName('nav');
+		this.renderer.setStyle(header[0], 'background-color', 'transparent');
+	}
 
   updateDataItems() {
     const finalValues = [142, 293, 36, 47]; // Valores finais desejados
