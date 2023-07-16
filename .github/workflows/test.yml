@@ -21,6 +21,18 @@ jobs:
       run: npm install -g @angular/cli
       working-directory: ./frontend
     
+    - name: Set up Xvfb
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y xvfb
+        export DISPLAY=:99
+
+    - name: Start Xvfb
+      run: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+
+    - name: Wait for Xvfb to start
+      run: sleep 3
+
     # Run Unit Tests
     - name: Unit Tests
       run: |
