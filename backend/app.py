@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routes.avinocultura import avicultura
+from routes.avicultura import avicultura
 from routes.suinocultura import suinocultura
 from routes.bovinocultura import bovinocultura
 from routes.populacao import populacao
