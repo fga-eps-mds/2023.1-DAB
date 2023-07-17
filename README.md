@@ -6,6 +6,19 @@ Este projeto é um website que tem como objetivo exibir informações e dados so
 
 ## Rodando o projeto
 
+### Banco de Dados
+
+Primeiro é necessário subir um banco MongoDB.
+
+Altere o arquivo `.envsample`, com as credências do seu usuário e mude o nome
+do arquivo para `.env`.
+
+Execute o seguinte comando para popular o banco.
+
+```sh
+python3 poputale.py
+```
+
 ### Backend
 
 Primeiro, é necessário instalar as depedências do projeto. É recomendado à utilização
@@ -42,7 +55,6 @@ Acesse o diretório frontend e instale as dependências com `npm install`. Agora
 ```sh
 ng serve
 ```
-
 Pronto! A aplicação estará funcionando na porta 4200.
 
 ### :handshake:  Colaboradores:
