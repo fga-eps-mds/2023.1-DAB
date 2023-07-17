@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ChartData } from 'src/app/interfaces/ChartData';
-import { AvinoculturaService } from 'src/app/services/avinocultura-service/avinocultura.service';
+import { AvinoculturaService } from 'src/app/services/avicultura-service/avicultura.service';
 import { BovinoCulturaService } from 'src/app/services/bovinocultura-service/bovinocultura.service';
 import { SuinoculturaService } from 'src/app/services/suinocultura-service/suinocultura.service';
 
 enum DataId {
 	SUINO  = "suinocultura",
 	BOVINO = "bovinocultura",
-	AVINO = "avinocultura",
+	AVE = "avicultura",
 	SAFRA = "safra"
 }
 
@@ -84,7 +84,7 @@ export class DadosPecuariosComponent implements OnInit{
 
 			break;
 
-			case DataId.AVINO:
+			case DataId.AVE:
 
 				this.aviculturaService.listCabecas().subscribe((cabecas) => {
 					charts.push(cabecas);
