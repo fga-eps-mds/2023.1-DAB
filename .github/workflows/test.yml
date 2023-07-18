@@ -21,12 +21,12 @@ jobs:
       run: npm install -g @angular/cli
       working-directory: ./frontend
 
-    # Send Test Coverage Report to Code Climate
-    - name: Send Test Coverage Report
-      uses: codeclimate/codeclimate-action@v3.4.0
-      with:
-        codeclimate_token: ${{ secrets.CODECLIMATE_REPORTER_ID }}
-        files: ./frontend/coverage
+    - name: Set Test Reporter ID
+      run: echo "CODECLIMATE_REPO_TOKEN=${{ secrets.CODECLIMATE_REPORTER_ID }}" >> $GITHUB_ENV
+
+
+    - name: Run before-build command
+      run: ./frontend/cc-test-reporter before-build
 
     # Run Unit Tests
     - name: Unit Tests
@@ -35,4 +35,6 @@ jobs:
           npm install karma-phantomjs-launcher
           ng test --browsers ChromeHeadless --watch=false
     
+    - name: Run after-build command
+      run: ./frontend/cc-test-reporter after-build --exit-code ${{ job.status }}
 
