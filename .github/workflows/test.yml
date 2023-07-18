@@ -36,5 +36,8 @@ jobs:
           ng test --browsers ChromeHeadless --watch=false
     
     - name: Run after-build command
-      run: ./frontend/cc-test-reporter after-build --exit-code ${{ job.status }}
+      run: |
+          ./cc-test-reporter format-coverage --output coverage/codeclimate.json
+          ./cc-test-reporter sum-coverage coverage/codeclimate.json
+          ./cc-test-reporter upload-coverage
 
