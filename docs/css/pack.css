@@ -789,3 +789,8 @@ footer h1{
     display: inline-block; 
     margin-left:50px; 
     margin-right:25px;}
+
+.backlog{
+     width: 1200px;
+     height: 700px;
+}
