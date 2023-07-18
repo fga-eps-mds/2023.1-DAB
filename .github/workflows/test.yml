@@ -37,7 +37,7 @@ jobs:
     
     - name: Run after-build command
       run: |
-          ./cc-test-reporter format-coverage --output coverage/codeclimate.json
-          ./cc-test-reporter sum-coverage coverage/codeclimate.json
-          ./cc-test-reporter upload-coverage
+          ./frontend/cc-test-reporter format-coverage --output coverage/codeclimate.json
+          ./frontend/cc-test-reporter sum-coverage coverage/codeclimate.json
+          ./frontend/cc-test-reporter upload-coverage
 
