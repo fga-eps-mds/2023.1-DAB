@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25.53% </span>
+                <span class="strong">24% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/47</span>
+                <span class='fraction'>12/50</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.57% </span>
+                <span class="strong">22.22% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/7</span>
+                <span class='fraction'>2/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.33% </span>
+                <span class="strong">12.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/15</span>
+                <span class='fraction'>2/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25.53% </span>
+                <span class="strong">24% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/47</span>
+                <span class='fraction'>12/50</span>
             </div>
         
             
@@ -177,7 +177,11 @@
 <a name='L112'></a><a href='#L112'>112</a>
 <a name='L113'></a><a href='#L113'>113</a>
 <a name='L114'></a><a href='#L114'>114</a>
-<a name='L115'></a><a href='#L115'>115</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -216,10 +220,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -228,24 +229,31 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -294,14 +302,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ChartData } from 'src/app/interfaces/ChartData';
-import { AvinoculturaService } from 'src/app/services/avinocultura-service/avinocultura.service';
+import { AvinoculturaService } from 'src/app/services/avicultura-service/avicultura.service';
 import { BovinoCulturaService } from 'src/app/services/bovinocultura-service/bovinocultura.service';
 import { SuinoculturaService } from 'src/app/services/suinocultura-service/suinocultura.service';
 &nbsp;
 enum DataId {
 	SUINO  = "suinocultura",
 	BOVINO = "bovinocultura",
-	AVINO = "avinocultura",
+	AVE = "avicultura",
 	SAFRA = "safra"
 }
 &nbsp;
@@ -329,7 +337,12 @@ export class DadosPecuariosComponent implements OnInit{
 		
 <span class="cstat-no" title="statement not covered" >		console.log(this.charts);</span>
 	}
+<span class="fstat-no" title="function not covered" >	setTitle(</span>): string{
+		const routerParams = <span class="cstat-no" title="statement not covered" >this.route.snapshot.paramMap;</span>
+		const dataId = <span class="cstat-no" title="statement not covered" >routerParams.get("dadosId") ?? "";</span>
 &nbsp;
+<span class="cstat-no" title="statement not covered" >		return dataId.toUpperCase()</span>
+	}
 <span class="fstat-no" title="function not covered" >	loadData(</span>): Array&lt;ChartData&gt; {
 		const routerParams = <span class="cstat-no" title="statement not covered" >this.route.snapshot.paramMap;</span>
 		const dataId = <span class="cstat-no" title="statement not covered" >routerParams.get("dadosId") ?? "";</span>
@@ -343,27 +356,26 @@ export class DadosPecuariosComponent implements OnInit{
 <span class="cstat-no" title="statement not covered" >					charts.push(abatidos);	</span>	// adiciona a requisição ao array que será retornado nessa função...
 				});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				this.bovinoculturaService.listCabecas().subscribe(<span class="fstat-no" title="function not covered" >(c</span>abecas) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >					charts.push(cabecas);</span>
-				})
-&nbsp;
 <span class="cstat-no" title="statement not covered" >				this.bovinoculturaService.listPeso().subscribe(<span class="fstat-no" title="function not covered" >(p</span>eso) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >					charts.push(peso);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >					this.load = true;	</span>			// após as requisições serem feitas, o load recebe true
 				});
 &nbsp;
+<span class="cstat-no" title="statement not covered" >				this.bovinoculturaService.listCabecas().subscribe(<span class="fstat-no" title="function not covered" >(c</span>abecas) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >					charts.push(cabecas);</span>
+				})
+&nbsp;
 <span class="cstat-no" title="statement not covered" >			break;</span>
 &nbsp;
 			case DataId.SUINO:
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				this.suinoculturaService.listAbatidos().subscribe(<span class="fstat-no" title="function not covered" >(a</span>batidos) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >					charts.push(abatidos);</span>
-				});
-&nbsp;
 <span class="cstat-no" title="statement not covered" >				this.suinoculturaService.listCabecas().subscribe(<span class="fstat-no" title="function not covered" >(c</span>abecas) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >					charts.push(cabecas);</span>
 				})
+<span class="cstat-no" title="statement not covered" >				this.suinoculturaService.listAbatidos().subscribe(<span class="fstat-no" title="function not covered" >(a</span>batidos) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >					charts.push(abatidos);</span>
+				});
 &nbsp;
 <span class="cstat-no" title="statement not covered" >				this.suinoculturaService.listPeso().subscribe(<span class="fstat-no" title="function not covered" >(p</span>eso) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >					charts.push(peso);</span>
@@ -373,7 +385,7 @@ export class DadosPecuariosComponent implements OnInit{
 &nbsp;
 <span class="cstat-no" title="statement not covered" >			break;</span>
 &nbsp;
-			case DataId.AVINO:
+			case DataId.AVE:
 &nbsp;
 <span class="cstat-no" title="statement not covered" >				this.aviculturaService.listCabecas().subscribe(<span class="fstat-no" title="function not covered" >(c</span>abecas) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >					charts.push(cabecas);</span>
@@ -412,7 +424,7 @@ export class DadosPecuariosComponent implements OnInit{
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-07-16T22:18:38.496Z
+                at 2023-07-18T05:56:31.966Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

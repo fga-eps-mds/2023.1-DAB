@@ -21,12 +21,12 @@ jobs:
       run: npm install -g @angular/cli
       working-directory: ./frontend
 
-    - name: Set Test Reporter ID
-      run: echo "CODECLIMATE_REPO_TOKEN=${{ secrets.CODECLIMATE_REPORTER_ID }}" >> $GITHUB_ENV
+    # - name: Set Test Reporter ID
+    #   run: echo "CODECLIMATE_REPO_TOKEN=${{ secrets.CODECLIMATE_REPORTER_ID }}" >> $GITHUB_ENV
 
 
-    - name: Run before-build command
-      run: ./frontend/cc-test-reporter before-build
+    # - name: Run before-build command
+    #   run: ./frontend/cc-test-reporter before-build
 
     # Run Unit Tests
     - name: Unit Tests
@@ -35,9 +35,9 @@ jobs:
           npm install karma-phantomjs-launcher
           ng test --browsers ChromeHeadless --watch=false
     
-    - name: Run after-build command
-      run: |
-          ./frontend/cc-test-reporter format-coverage --output coverage/codeclimate.json
-          ./frontend/cc-test-reporter sum-coverage coverage/codeclimate.json
-          ./frontend/cc-test-reporter upload-coverage
+    # - name: Run after-build command
+    #   run: |
+    #       ./frontend/cc-test-reporter format-coverage --output coverage/codeclimate.json
+    #       ./frontend/cc-test-reporter sum-coverage coverage/codeclimate.json
+    #       ./frontend/cc-test-reporter upload-coverage
 
