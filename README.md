@@ -1,6 +1,6 @@
 # 🌾 Dados sobre o Agronegócio Brasileiro - DAB
 
-<a href="https://codeclimate.com/github/fga-eps-mds/2023.1-DAB/maintainability"><img src="https://api.codeclimate.com/v1/badges/206eaafe919a26289f48/maintainability" /></a> <a href="https://codeclimate.com/github/fga-eps-mds/2023.1-DAB/test_coverage"><img src="https://api.codeclimate.com/v1/badges/206eaafe919a26289f48/test_coverage" /></a> [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/fga-eps-mds/2023.1-DAB.svg)](http://isitmaintained.com/project/fga-eps-mds/2023.1-DAB "Average time to resolve an issue")
+<a href="https://codeclimate.com/github/fga-eps-mds/2023.1-DAB/maintainability"><img src="https://api.codeclimate.com/v1/badges/206eaafe919a26289f48/maintainability" /></a>[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/fga-eps-mds/2023.1-DAB.svg)](http://isitmaintained.com/project/fga-eps-mds/2023.1-DAB "Average time to resolve an issue")
 
 Este projeto é um website que tem como objetivo exibir informações e dados sobre o agronegócio brasileiro, incluindo informações sobre plantio e cultivo da produção agrícola e pecuária.
 
