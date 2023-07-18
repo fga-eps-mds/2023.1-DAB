@@ -1,17 +1,8 @@
 
 <div class="banner">
-  <nav>
-    <a href="#"><img class = "logo" alt = "logomarca" src = "./assets/logomarca.png"></a>
- 
-       <ul class="nav-itens">    
-           <li class="link"><a href="https://github.com/fga-eps-mds/2023.1-DAB" target="_blank">Repositórios</a> </li>
-           <li><a href="#">Recursos</a></li>
-           <li><a href="#">Sobre</a></li>
-           <li><a href="#">Contato</a></li>
-       </ul>
-   </nav>  
+<app-header></app-header>
 
-  <p class="banner-text">Agricultura de<br>sucesso<br>começa com<br>dados<br>precisos</p>
+  <p class="banner-text">Agricultura de sucesso começa com dados<br>precisos</p>
 </div>
 
 <div class="green-bar">
@@ -33,10 +24,10 @@
   </div>
 </div>
 <div class="carousel">
-  <h2>PAINEL DE DADOS</h2>
+  <h2 id="carousel">PAINEL DE DADOS</h2>
   <app-carousel></app-carousel>
 </div>
-<div class="info-container">
+<div class="info-container" id="sobre">
   <div class="info-content">
     <div class="info-image">
       <img src="../../../assets/fazendeiro_plantando.png" alt="Fazendeiro">
@@ -51,6 +42,23 @@
       <p>
         Nossa missão é capacitar produtores com as ferramentas necessárias para maximizar sua colheita e alcançar o sucesso no agronegócio.
       </p>
+    </div>
+  </div>
+</div>
+<div class="info-container" id="contato">
+  <div class="info-content">
+    <div class="info-text">
+      <h2>FALE CONOSCO</h2>
+      <p>
+        Se você tiver alguma dúvida, sugestão ou quiser obter mais informações sobre nossos dados, 
+        entre em contato conosco<br/> copiando o endereço de email abaixo. 
+        <br/>Nossa equipe terá prazer em ajudar!
+      </p>
+      <div class="send-email-bt" (click)="copyToClipboard()"  (keyup)="handleKeyUp($event)" tabindex="0">Copiar Email</div>
+      <div class="clipboard-message" *ngIf="isCopied">Email "dab2023.br@gmail.com" copiado para a área de transferência!</div>
+    </div>
+    <div class="info-image">
+      <img src="../../../assets/tech_agro.png" alt="fazendeiro no computador">
     </div>
   </div>
 </div>

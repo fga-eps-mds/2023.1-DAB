@@ -1,7 +1,6 @@
 import os
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-from pymongo.collection import Collection
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -16,6 +15,9 @@ db = client.DAB
 
 def insert_data(collection: str, data):
     db[collection].insert_many(data)
+
+def insert_one(collection: str, data):
+    db[collection].insert_one(data)
 
 async def fetch_one(collection: str, search: dict):
     response = db[collection].find_one(search)

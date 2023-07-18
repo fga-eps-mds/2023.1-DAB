@@ -16,11 +16,31 @@ export class BarChartComponent implements OnInit {
 
 	private object!: Chart;
 
+	max!:string;
+
 	ngOnInit(): void {
 		Chart.register(...registerables);
 		this.createChart("bar")
+		this.max= this.getMax(this.chart.dataList);
+		console.log(this.max)
 	}
+	media(): number{
+		let avg = 0
+		for (let i= 0; i <this.chart.dataList.length; i++){
+			const a= this.chart.dataList[i]/this.chart.dataList.length
+			avg += Math.trunc(a)
+		}
+		return avg
+	}
+	/*eslint-disable  @typescript-eslint/no-explicit-any*/
+	getMax(array: any[]): string{
+		const max = Math.max(...array);
+		const index = array.indexOf(max.toString());
+		return this.chart.labels[index];
 
+	}
+	/*eslint-disable  @typescript-eslint/no-explicit-any*/
+ 
 	changeChart(type: ChartType){
 		this.object.destroy()
 		this.createChart(type)
@@ -63,13 +83,19 @@ export class BarChartComponent implements OnInit {
 						}
 					}
 				},
+				
 			plugins: {
 				title: {
 					display: true,
 					fullSize: true,
 					color: "black",
 					font: {
-						size: 60
+						size: 35,
+
+					},
+					padding: {
+						top: 80, // adiciona 20px de margem superior
+						bottom: 80// adiciona 20px de margem inferior
 					},
 					text: this.chart.title
 				},

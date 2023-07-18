@@ -8,11 +8,11 @@ import { ChartData } from 'src/app/interfaces/ChartData';
 })
 export class AvinoculturaService extends HttpBaseService {
 
-  private endpointCabecasGalinhasPoeiras = 'avinocultura/1988';
-  private endpointOvosProduzidos = 'avinocultura/29';
-  private endpointOvosProduzidosConsumo = 'avinocultura/9588';
-  private endpointOvosProduzidosIncubacao = 'avinocultura/9589';
-  private endpointCabecas = 'avinocultura/2209';
+  private endpointCabecasGalinhasPoeiras = 'avicultura/1988';
+  private endpointOvosProduzidos = 'avicultura/29';
+  private endpointOvosProduzidosConsumo = 'avicultura/9588';
+  private endpointOvosProduzidosIncubacao = 'avicultura/9589';
+  private endpointCabecas = 'populacao/aves';
 
   constructor(protected override readonly injector: Injector) {
     super(injector);

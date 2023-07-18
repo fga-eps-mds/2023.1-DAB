@@ -17,4 +17,3 @@ def toChartData(ibge_list: list[IbgeData], categoria = None) -> list[dict]:
                 chart_list.append(chartData.dict())
 
     return chart_list
-    

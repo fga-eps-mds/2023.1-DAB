@@ -10,7 +10,7 @@ export class SuinoculturaService extends HttpBaseService {
 
   private endpointAbatidos = 'suinocultura/284';
   private endpointPeso  = 'suinocultura/285';
-  private endpointPopulacao = 'suinocultura/2209';
+  private endpointPopulacao = 'populacao/suinos';
 
   constructor(protected override readonly injector: Injector) {
     super(injector);

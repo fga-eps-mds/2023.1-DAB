@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ChartData } from 'src/app/interfaces/ChartData';
-import { AvinoculturaService } from 'src/app/services/avinocultura-service/avinocultura.service';
+import { AvinoculturaService } from 'src/app/services/avicultura-service/avicultura.service';
 import { BovinoCulturaService } from 'src/app/services/bovinocultura-service/bovinocultura.service';
 import { SuinoculturaService } from 'src/app/services/suinocultura-service/suinocultura.service';
 
 enum DataId {
 	SUINO  = "suinocultura",
 	BOVINO = "bovinocultura",
-	AVINO = "avinocultura",
+	AVE = "avicultura",
 	SAFRA = "safra"
 }
 
@@ -36,7 +36,12 @@ export class DadosPecuariosComponent implements OnInit{
 		
 		console.log(this.charts);
 	}
+	setTitle(): string{
+		const routerParams = this.route.snapshot.paramMap;
+		const dataId = routerParams.get("dadosId") ?? "";
 
+		return dataId.toUpperCase()
+	}
 	loadData(): Array<ChartData> {
 		const routerParams = this.route.snapshot.paramMap;
 		const dataId = routerParams.get("dadosId") ?? "";
@@ -50,27 +55,26 @@ export class DadosPecuariosComponent implements OnInit{
 					charts.push(abatidos);		// adiciona a requisição ao array que será retornado nessa função...
 				});
 
-				this.bovinoculturaService.listCabecas().subscribe((cabecas) => {
-					charts.push(cabecas);
-				})
-
 				this.bovinoculturaService.listPeso().subscribe((peso) => {
 					charts.push(peso);
 
 					this.load = true;				// após as requisições serem feitas, o load recebe true
 				});
 
+				this.bovinoculturaService.listCabecas().subscribe((cabecas) => {
+					charts.push(cabecas);
+				})
+
 			break;
 
 			case DataId.SUINO:
 
-				this.suinoculturaService.listAbatidos().subscribe((abatidos) => {
-					charts.push(abatidos);
-				});
-
 				this.suinoculturaService.listCabecas().subscribe((cabecas) => {
 					charts.push(cabecas);
 				})
+				this.suinoculturaService.listAbatidos().subscribe((abatidos) => {
+					charts.push(abatidos);
+				});
 
 				this.suinoculturaService.listPeso().subscribe((peso) => {
 					charts.push(peso);
@@ -80,7 +84,7 @@ export class DadosPecuariosComponent implements OnInit{
 
 			break;
 
-			case DataId.AVINO:
+			case DataId.AVE:
 
 				this.aviculturaService.listCabecas().subscribe((cabecas) => {
 					charts.push(cabecas);

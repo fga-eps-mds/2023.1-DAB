@@ -25,9 +25,9 @@ export class HomeComponent {
     desc3 : 'trimestre'
   }, 
   {
-    id: 'avinocultura',
+    id: 'avicultura',
     imagemUrl: './assets/galinha.png',
-    nome: 'Avinocultura',
+    nome: 'Avicultura',
     desc1: 'Dados referentes à',
     desc2: 'avicultura do último',
     desc3 : 'trimestre'

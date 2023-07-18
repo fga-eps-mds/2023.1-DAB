@@ -22,7 +22,7 @@ export class DadosSafrasComponent {
   {
     id: 'feijao',
     imagemUrl: './assets/feijao.png',
-    nome: 'Feijao',
+    nome: 'Feijão',
     desc1: 'Dados referentes à',
     desc2: 'a safra anual',
     desc3 : 'de feijao'
