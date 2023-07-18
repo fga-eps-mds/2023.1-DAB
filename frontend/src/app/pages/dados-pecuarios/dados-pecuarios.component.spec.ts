@@ -1,31 +1,40 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { DadosPecuariosComponent } from './dados-pecuarios.component';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http'; 
+import { of } from 'rxjs';
 import { HeaderComponent } from 'src/app/components/header/header.component';
-import { FooterComponent } from 'src/app/components/footer/footer.component';
-import { BarChartComponent } from 'src/app/chart/bar-chart/bar-chart.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { IbgeApiService } from 'src/app/service/ibge-api.service';
-
+import { DadosPecuariosComponent } from './dados-pecuarios.component';
+import { LoaderComponent } from 'src/app/components/loader/loader.component';
 
 describe('DadosPecuariosComponent', () => {
   let component: DadosPecuariosComponent;
   let fixture: ComponentFixture<DadosPecuariosComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    const activatedRouteMock = {
+      snapshot: {
+        paramMap: {
+          get: (param: string) => ''
+        }
+      }
+    };
+
+    await TestBed.configureTestingModule({
       declarations: [
         DadosPecuariosComponent,
         HeaderComponent,
-        FooterComponent,
-        BarChartComponent
+        LoaderComponent
       ],
-      imports: [HttpClientTestingModule], 
-      providers: [IbgeApiService] 
-    });
+      providers: [
+        { provide: ActivatedRoute, useValue: activatedRouteMock }
+      ],
+      imports: [HttpClientModule] // Adicionado HttpClientModule
+    }).compileComponents();
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(DadosPecuariosComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

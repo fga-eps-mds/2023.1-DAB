@@ -1,0 +1,43 @@
+name: Testes
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  testes-unitarios-frontend:
+    runs-on: ubuntu-latest
+  
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: npm install
+      working-directory: ./frontend
+
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+      working-directory: ./frontend
+
+    # - name: Set Test Reporter ID
+    #   run: echo "CODECLIMATE_REPO_TOKEN=${{ secrets.CODECLIMATE_REPORTER_ID }}" >> $GITHUB_ENV
+
+
+    # - name: Run before-build command
+    #   run: ./frontend/cc-test-reporter before-build
+
+    # Run Unit Tests
+    - name: Unit Tests
+      run: |
+          cd frontend
+          npm install karma-phantomjs-launcher
+          ng test --browsers ChromeHeadless --watch=false
+    
+    # - name: Run after-build command
+    #   run: |
+    #       ./frontend/cc-test-reporter format-coverage --output coverage/codeclimate.json
+    #       ./frontend/cc-test-reporter sum-coverage coverage/codeclimate.json
+    #       ./frontend/cc-test-reporter upload-coverage
+

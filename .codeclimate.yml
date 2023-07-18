@@ -1,0 +1,10 @@
+version: "2"
+plugins:
+  codeclimate-jest:
+    enabled: true
+  codeclimate-codecov:
+    enabled: true
+  codeclimate-json-subset:
+    enabled: true
+coverage:
+  path: ./frontend/coverage
